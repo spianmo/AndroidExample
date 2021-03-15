@@ -1,0 +1,28 @@
+<!--
+  ~ Copyright (c) 2020
+  ~ @Project:TrackerProject
+  ~ @Author:Finger
+  ~ @FileName:styles.xml
+  ~ @LastModified:2020-09-12T04:42:39.482+08:00
+  -->
+
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:navigationBarColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="EditTextRit">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="EditTextErr">
+        <item name="android:textColor">@android:color/holo_red_light</item>
+    </style>
+</resources>
