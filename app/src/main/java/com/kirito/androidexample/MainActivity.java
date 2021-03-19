@@ -1,11 +1,14 @@
 package com.kirito.androidexample;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.ViewGroup;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -71,8 +74,23 @@ public class MainActivity extends AppCompatActivity {
         TextInputEditText edUserName = findViewById(R.id.ed_username);
         TextInputEditText edPassword = findViewById(R.id.ed_pwd);
         Button loginButton = findViewById(R.id.btn_login);
-        loginButton.setOnClickListener(v -> Log.e(TAG,"账号为:"+edUserName+" 密码为:"+edPassword));
+        loginButton.setOnClickListener(v -> {
+            final String username = edUserName.getText().toString();  
+            final String password = edPassword.getText().toString();
+            Log.e(TAG, "账号为:" + username + " 密码为:" + password);
+            if (TextUtils.isEmpty(username) || TextUtils.isEmpty(password)) {
+                Toast.makeText(this, "账号密码不能为空！", Toast.LENGTH_SHORT).show();
+            } else if (!username.equals("root") || !password.equals("root")) {
+                Toast.makeText(this, "用户名或密码错误", Toast.LENGTH_SHORT).show();
+                edPassword.setText("");
+                edPassword.requestFocus();
+            } else {
+                startActivity(new Intent(this, CauActivity.class));
+                finish();
+            }
+        });
     }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();

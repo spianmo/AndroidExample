@@ -9,11 +9,36 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:weightSum="3"
         android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="130dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.kirito.androidexample.widget.CircleImageView
+                    android:id="@+id/cir_uin"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:src="@drawable/nicklogo" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:orientation="vertical">
 
             <LinearLayout
@@ -39,6 +64,7 @@
                             android:id="@+id/ed_username"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_baseline_account_circle_24"
                             android:hint="账号"
                             android:inputType="number" />
 
@@ -56,6 +82,7 @@
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/ed_pwd"
+                            android:drawableStart="@drawable/ic_baseline_lock_24"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="密码"
@@ -88,6 +115,33 @@
 
 
             </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/tv_buy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="忘记密码"
+                android:textColor="@color/blue" />
+
+            <TextView
+                android:id="@+id/tv_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="注册新账号"
+                android:textColor="@color/blue" />
         </LinearLayout>
 
     </LinearLayout>
