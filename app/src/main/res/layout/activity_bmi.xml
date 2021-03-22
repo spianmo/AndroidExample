@@ -33,6 +33,7 @@
                 android:id="@+id/ed_weight"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:lines="1"
                 android:hint="输入体重，单位公斤" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -47,6 +48,7 @@
                 android:id="@+id/ed_height"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:lines="1"
                 android:hint="输入身高，单位米" />
 
         </com.google.android.material.textfield.TextInputLayout>

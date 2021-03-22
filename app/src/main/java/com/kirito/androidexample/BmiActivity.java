@@ -41,7 +41,13 @@ public class BmiActivity extends AppCompatActivity {
                 Toast.makeText(this, "请填写完整您的体重身高！", Toast.LENGTH_SHORT).show();
                 return;
             }
-            Double bmi = calculateBmi(Double.parseDouble(weight), Double.parseDouble(height));
+            Double bmi;
+            try {
+                bmi = calculateBmi(Double.parseDouble(weight), Double.parseDouble(height));
+            } catch (NumberFormatException ignored) {
+                Toast.makeText(this, "请正确填写体重身高格式!", Toast.LENGTH_SHORT).show();
+                return;
+            }
             tvResult.setText("BMI： " + String.format("%.2f", bmi) + "\n诊断：" + processBmi(!isMan ? bmi + 1 : bmi));
         });
     }
