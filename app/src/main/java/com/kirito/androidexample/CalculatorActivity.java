@@ -53,8 +53,13 @@ public class CalculatorActivity extends AppCompatActivity {
         String expression = edResult.getText().toString()
                 .replace("×", "*")
                 .replace("÷", "/");
-        Object result = AviatorEvaluator.execute(expression);
-        edResult.setText(edResult.getText().toString() + "\n" + "=" + result);
+        String resultStr = edResult.getText().toString();
+        try {
+            Object result = AviatorEvaluator.execute(expression);
+            edResult.setText(resultStr + (resultStr.endsWith(".") ? "0" : "") + "\n" + "=" + result);
+        } catch (ArithmeticException e) {
+            edResult.setText(resultStr + (resultStr.endsWith(".") ? "0" : "") + "\n" + "=" + "除数不能为0");
+        }
     }
 
     @SuppressLint("SetTextI18n")
@@ -63,6 +68,19 @@ public class CalculatorActivity extends AppCompatActivity {
         Button button = (Button) view;
         String press = button.getText().toString();
         String currentText = edResult.getText().toString();
+        if (isEndsWithOperator(currentText) && isContainsOperator(press)) {
+            return;
+        }
+        if (!"0".equals(currentText)) {
+            if ("0".equals(currentText.substring(calLastOperationPosition(currentText) + 1))) {
+                return;
+            }
+        }
+
+        if (isContainsOperator(press) && currentText.endsWith(".")) {
+            currentText = currentText + "0";
+        }
+
         if ("0".equals(currentText) && isContainsNumeric(press)) {
             edResult.setText(press);
         } else {
@@ -75,6 +93,15 @@ public class CalculatorActivity extends AppCompatActivity {
         String currentText = edResult.getText().toString();
         if ("0".equals(currentText)) {
             edResult.setText("0.");
+            return;
+        }
+        if (currentText.endsWith(".")) {
+            return;
+        }
+        if (currentText.contains(".") && !isContainsOperator(currentText)) {
+            return;
+        }
+        if (currentText.substring(calLastOperationPosition(currentText + 1)).contains(".")) {
             return;
         }
         edResult.setText(calLastOperationPosition(currentText) == currentText.length() - 1
@@ -101,6 +128,15 @@ public class CalculatorActivity extends AppCompatActivity {
     }
 
 
+    private boolean isEndsWithOperator(String str) {
+        for (String item : OPERATOR) {
+            if (str.endsWith(item)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     private boolean isContainsOperator(String str) {
         for (String item : OPERATOR) {
             if (str.contains(item)) {
@@ -120,11 +156,15 @@ public class CalculatorActivity extends AppCompatActivity {
     }
 
     private void checkEqualSign(boolean usePreResult) {
+        String processStr = edResult.getText().toString();
+        if (processStr.contains("除数不能为0")) {
+            edResult.setText("0");
+            return;
+        }
         if (edResult.getText().toString().contains("=")) {
             if (!usePreResult) {
                 edResult.setText("0");
             } else {
-                String processStr = edResult.getText().toString();
                 edResult.setText(processStr.substring(processStr.lastIndexOf("=") + 1));
             }
         }
