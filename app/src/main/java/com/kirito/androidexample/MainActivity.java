@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
                 edPassword.setText("");
                 edPassword.requestFocus();
             } else {
-                startActivity(new Intent(this, CauActivity.class));
+                startActivity(new Intent(this, CalculatorActivity.class));
                 finish();
             }
         });

@@ -18,8 +18,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CauActivity"
-            android:label="计算器">
+            android:name=".CalculatorActivity"
+            android:label="Calculator">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
