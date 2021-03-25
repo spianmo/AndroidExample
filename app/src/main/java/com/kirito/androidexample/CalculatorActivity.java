@@ -118,7 +118,7 @@ public class CalculatorActivity extends AppCompatActivity {
         }
         if (isContainsOperator(currentText.substring(currentText.length() - 1))) {
             String processStr = currentText.substring(0, currentText.length() - 1);
-            String num = processStr.substring(calLastOperationPosition(processStr) + 1);
+            String num = processStr.substring(calLastOperationPosition(processStr));
             edResult.setText(currentText + (Double.parseDouble(num) / 100));
         } else {
             String processStr = currentText.substring(0, calLastOperationPosition(currentText) + 1);
