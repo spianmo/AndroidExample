@@ -17,7 +17,7 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.kirito.androidexample.widget.bling.Bling;
 import com.kirito.androidexample.widget.bling.BlingType;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     private Bling mBling;
     int[] colors = new int[]{
@@ -40,13 +40,13 @@ public class MainActivity extends AppCompatActivity {
             Color.parseColor("#CDDC39"),
             Color.parseColor("#FF5722"),
     };
-    private String TAG = MainActivity.class.getSimpleName();
+    private String TAG = LoginActivity.class.getSimpleName();
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
         mBling = new Bling.Builder((ViewGroup) getWindow().getDecorView())
                 .setDuration(6000)
                 .setShapeCount(66)
@@ -80,13 +80,18 @@ public class MainActivity extends AppCompatActivity {
             Log.e(TAG, "账号为:" + username + " 密码为:" + password);
             if (TextUtils.isEmpty(username) || TextUtils.isEmpty(password)) {
                 Toast.makeText(this, "账号密码不能为空！", Toast.LENGTH_SHORT).show();
-            } else if (!username.equals("root") || !password.equals("root")) {
-                Toast.makeText(this, "用户名或密码错误", Toast.LENGTH_SHORT).show();
-                edPassword.setText("");
-                edPassword.requestFocus();
             } else {
-                startActivity(new Intent(this, CalculatorActivity.class));
-                finish();
+                if (username.equals("root") && password.equals("root")) {
+                    Intent intent = new Intent(this, InfoActivity.class);
+                    intent.putExtra("username", username);
+                    intent.putExtra("password", password);
+                    startActivity(intent);
+                    finish();
+                } else {
+                    Toast.makeText(this, "用户名或密码错误", Toast.LENGTH_SHORT).show();
+                    edPassword.setText("");
+                    edPassword.requestFocus();
+                }
             }
         });
     }
