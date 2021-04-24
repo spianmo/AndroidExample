@@ -9,10 +9,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Jump2Activity"></activity>
+        <activity
+            android:name=".JumpActivity"
+            android:label="Activity跳转传值">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MenuActivity"
+            android:theme="@style/AppTheme.menu">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".BottomNaviActivity"
-            android:theme="@style/AppTheme.sub"
-            android:label="BottomNavigation">
+            android:label="BottomNavigation"
+            android:theme="@style/AppTheme.sub">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
