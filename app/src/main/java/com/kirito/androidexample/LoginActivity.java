@@ -1,5 +1,6 @@
 package com.kirito.androidexample;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -16,6 +17,11 @@ import com.eminayar.panter.PanterDialog;
 import com.google.android.material.textfield.TextInputEditText;
 import com.kirito.androidexample.widget.bling.Bling;
 import com.kirito.androidexample.widget.bling.BlingType;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -41,7 +47,6 @@ public class LoginActivity extends AppCompatActivity {
             Color.parseColor("#FF5722"),
     };
     private String TAG = LoginActivity.class.getSimpleName();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,7 +80,7 @@ public class LoginActivity extends AppCompatActivity {
         TextInputEditText edPassword = findViewById(R.id.ed_pwd);
         Button loginButton = findViewById(R.id.btn_login);
         loginButton.setOnClickListener(v -> {
-            final String username = edUserName.getText().toString();  
+            final String username = edUserName.getText().toString();
             final String password = edPassword.getText().toString();
             Log.e(TAG, "账号为:" + username + " 密码为:" + password);
             if (TextUtils.isEmpty(username) || TextUtils.isEmpty(password)) {
@@ -102,4 +107,37 @@ public class LoginActivity extends AppCompatActivity {
         mBling.release();
     }
 
+    private void copyFile(Context context, String fileName) {
+        InputStream in = null;
+        FileOutputStream out = null;
+        String path = context.getFilesDir().getAbsolutePath();
+        File file = new File(path + fileName);
+
+        File filePath = new File(path);
+        if (!filePath.exists())
+            filePath.mkdirs();
+
+        if (file.exists())
+            return;
+
+        try {
+            in = context.getAssets().open(fileName);
+            out = new FileOutputStream(file);
+            int length = -1;
+            byte[] buf = new byte[1024];
+            while ((length = in.read(buf)) != -1) {
+                out.write(buf, 0, length);
+            }
+            out.flush();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (in != null) in.close();
+                if (out != null) out.close();
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
+        }
+    }
 }

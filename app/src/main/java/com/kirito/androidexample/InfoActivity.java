@@ -32,7 +32,6 @@ public class InfoActivity extends AppCompatActivity implements CheckBox.OnChecke
                 isMan = checkedId == R.id.man;
             }
         });
-
         cbJava = findViewById(R.id.cb_java);
         cbAndroid = findViewById(R.id.cb_android);
         cbEnglish = findViewById(R.id.cb_english);
@@ -41,7 +40,6 @@ public class InfoActivity extends AppCompatActivity implements CheckBox.OnChecke
         cbAndroid.setOnCheckedChangeListener(this);
         cbEnglish.setOnCheckedChangeListener(this);
         cbMath.setOnCheckedChangeListener(this);
-
         btnReg = findViewById(R.id.btn_reg);
         btnReg.setOnClickListener(new View.OnClickListener() {
             @Override

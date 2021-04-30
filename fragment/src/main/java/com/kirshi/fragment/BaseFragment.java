@@ -27,7 +27,7 @@ import java.lang.reflect.ParameterizedType;
  * @LastModified:2021-04-15T03:12:15.856+08:00
  */
 
-public abstract class BaseFragment<T extends ViewBinding> extends Fragment {
+public class BaseFragment<T extends ViewBinding> extends Fragment {
     Handler mainHandler;
     protected T v;
     protected Context mContext;
