@@ -1,4 +1,4 @@
-package com.kirshi.dialog;
+package com.kirshi.dialog.dialog;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -11,18 +11,18 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
-import com.kirshi.dialog.databinding.ActivityLoginBinding;
+import com.kirshi.dialog.databinding.FragmentDialogLoginBinding;
 
 public class LoginDialog extends DialogFragment {
     private OnLoginCallback listener;
-    private ActivityLoginBinding binding;
+    private FragmentDialogLoginBinding binding;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        binding = ActivityLoginBinding.inflate(inflater, container, false);
+        binding = FragmentDialogLoginBinding.inflate(inflater, container, false);
         View view = binding.getRoot();
 
         binding.btnLogin.setOnClickListener(v -> {

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2020
+  ~ @Project:TrackerProject
+  ~ @Author:Finger
+  ~ @FileName:log_item.xml
+  ~ @LastModified:2020-08-28T19:54:24.014+08:00
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/black"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/logtext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:text="--ASDFGHJKLqwertyuiop"
+        android:textColor="#00FF00"
+        android:textSize="13sp"
+        android:textStyle="italic" />
+</LinearLayout>

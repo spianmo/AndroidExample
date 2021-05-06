@@ -1,4 +1,4 @@
-package com.kirshi.dialog;
+package com.kirshi.dialog.dialog;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -10,7 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
 
-public class DelFragment extends DialogFragment {
+public class DeleteDialog extends DialogFragment {
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
