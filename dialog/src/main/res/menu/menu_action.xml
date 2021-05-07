@@ -2,8 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/login"
-        android:title="登录"
+        android:id="@+id/action_exit"
+        android:title="退出"
         app:showAsAction="always"
         android:icon="@drawable/ic_baseline_login_24" />
 </menu>

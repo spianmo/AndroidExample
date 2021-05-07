@@ -169,9 +169,11 @@ public class LifecycleFragment extends BaseFragment<FragmentLifecycleBinding> {
         public void run() {
             String line;
             try {
-                while ((line = reader.readLine()) != null) {
-                    fetchLogItem(line);
-                    Runtime.getRuntime().exec(new String[]{"logcat", "-c"});
+                while (true) {
+                    while ((line = reader.readLine()) != null) {
+                        fetchLogItem(line);
+                        Runtime.getRuntime().exec(new String[]{"logcat", "-c"});
+                    }
                 }
             } catch (IOException e) {
                 e.printStackTrace();

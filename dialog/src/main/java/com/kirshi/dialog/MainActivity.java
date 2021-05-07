@@ -2,18 +2,16 @@ package com.kirshi.dialog;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.DialogFragment;
 
 import com.kirshi.dialog.base.BaseActivity;
 import com.kirshi.dialog.databinding.ActivityMainBinding;
 import com.kirshi.dialog.dialog.CalculatorDialog;
-import com.kirshi.dialog.dialog.LoginDialog;
 import com.kirshi.dialog.fragment.LifecycleFragment;
 
 /**
@@ -31,6 +29,10 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
         v.btnJump.setOnClickListener(view -> {
             String num1 = v.edNum1.getText().toString();
             String num2 = v.edNum2.getText().toString();
+            if (TextUtils.isEmpty(num1) || TextUtils.isEmpty(num2)) {
+                showSnackBar("数字不能为空");
+                return;
+            }
             Intent intent = new Intent(this, ResultActivity.class);
             Bundle nums = new Bundle();
             nums.putString("num1", num1);
@@ -71,22 +73,8 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == R.id.login) {
-/*            DelFragment dialog = new DelFragment();
-            dialog.show(getSupportFragmentManager(), "删除");*/
-            LoginDialog loginDialog = new LoginDialog();
-            loginDialog.setOnLoginInputListener(new LoginDialog.OnLoginCallback() {
-                @Override
-                public void onCallback(String username, String password) {
-                    Toast.makeText(MainActivity.this, username + "\n" + password, Toast.LENGTH_SHORT).show();
-                }
-
-                @Override
-                public void onCancel(DialogFragment dialog) {
-                    Toast.makeText(MainActivity.this, "登录取消", Toast.LENGTH_SHORT).show();
-                }
-            });
-            loginDialog.show(getSupportFragmentManager(), "登录");
+        if (item.getItemId() == R.id.action_exit) {
+            finish();
         }
         return super.onOptionsItemSelected(item);
     }
