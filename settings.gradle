@@ -2,3 +2,5 @@ include ':dialog'
 include ':fragment'
 include ':app'
 rootProject.name = "AndroidExample"
+include ':framework'
+include ':simple'
