@@ -18,6 +18,7 @@
             android:label="ResultPage" />
         <activity
             android:name=".MainActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"
             android:label="Operation 05.05">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

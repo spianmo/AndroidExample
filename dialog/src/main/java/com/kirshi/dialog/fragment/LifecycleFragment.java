@@ -25,7 +25,7 @@ import java.io.InputStreamReader;
  */
 public class LifecycleFragment extends BaseFragment<FragmentLifecycleBinding> {
 
-    public static final String TAG = LifecycleFragment.class.getSimpleName();
+    public static final String TAG = LifecycleFragment.class.getSimpleName() + "============>";
     private final LogAdapter mLogAdapter = new LogAdapter();
     LinearLayoutManager manager;
     private OnActionCallback listener;
@@ -37,7 +37,7 @@ public class LifecycleFragment extends BaseFragment<FragmentLifecycleBinding> {
 
     @Override
     public void inCreateView() {
-        Log.d(TAG, "onCreateView");
+        Log.e(TAG, "onCreateView");
         v.btnFilter.setImageDrawable(getResources().getDrawable(MainActivity.isFilter ? R.drawable.ic_yellow : R.drawable.ic_green));
         manager = new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, true);
         v.sendList.setLayoutManager(manager);
@@ -62,75 +62,75 @@ public class LifecycleFragment extends BaseFragment<FragmentLifecycleBinding> {
     @Override
     public void onInflate(Activity activity, AttributeSet attrs,
                           Bundle savedInstanceState) {
-        Log.d(TAG, "onInflate");
+        Log.e(TAG, "onInflate");
         super.onInflate(activity, attrs, savedInstanceState);
     }
 
     @Override
     public void onAttach(Activity activity) {
-        Log.d(TAG, "onAttach");
+        Log.e(TAG, "onAttach");
         super.onAttach(activity);
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        Log.d(TAG, "onCreate");
+        Log.e(TAG, "onCreate");
         super.onCreate(savedInstanceState);
 
     }
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        Log.d(TAG, "onViewCreated");
+        Log.e(TAG, "onViewCreated");
         super.onViewCreated(view, savedInstanceState);
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
-        Log.d(TAG, "onActivityCreated");
+        Log.e(TAG, "onActivityCreated");
         super.onActivityCreated(savedInstanceState);
     }
 
     @Override
     public void onStart() {
-        Log.d(TAG, "onStart");
+        Log.e(TAG, "onStart");
         super.onStart();
     }
 
     @Override
     public void onResume() {
-        Log.d(TAG, "onResume");
+        Log.e(TAG, "onResume");
         super.onResume();
     }
 
     @Override
     public void onPause() {
-        Log.d(TAG, "onPause");
+        Log.e(TAG, "onPause");
         super.onPause();
     }
 
     @Override
     public void onStop() {
-        Log.d(TAG, "onStop");
+        Log.e(TAG, "onStop");
 
         super.onStop();
     }
 
     @Override
     public void onDestroyView() {
-        Log.d(TAG, "onDestroyView");
+        Log.e(TAG, "onDestroyView");
         super.onDestroyView();
     }
 
     @Override
     public void onDestroy() {
-        Log.d(TAG, "onDestroy");
+        Log.e(TAG, "onDestroy");
         super.onDestroy();
     }
 
     @Override
     public void onDetach() {
-        Log.d(TAG, "onDetach");
+        Log.e(TAG, "onDetach");
         super.onDetach();
     }
 
