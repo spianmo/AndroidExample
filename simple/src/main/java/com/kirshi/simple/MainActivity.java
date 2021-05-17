@@ -2,6 +2,7 @@ package com.kirshi.simple;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -12,6 +13,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.snackbar.Snackbar;
+import com.kirshi.advance.R;
 import com.kirshi.framework.base.BaseActivity;
 import com.kirshi.simple.databinding.ActivityMainBinding;
 import com.kirshi.simple.fragment.DashboardFragment;
@@ -51,7 +53,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
     }
 
     public void onFabClicked(View view) {
-        showSnackBar("onFabClicked");
+        showSnackBar("是否新增一条短信？");
     }
 
     private void bindNavigationDrawer() {
@@ -125,6 +127,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
     @Override
     public Snackbar showSnackBar(String message) {
         Snackbar snackbar = Snackbar.make(v.container, message, Snackbar.LENGTH_SHORT);
+        snackbar.setAction("确定", v -> Toast.makeText(MainActivity.this, "点击了确定", Toast.LENGTH_SHORT).show());
         runOnUI(snackbar::show);
         return snackbar;
     }
