@@ -72,7 +72,7 @@ class BlingView extends View {
         init();
     }
 
-    private void init(){
+    private void init() {
         mShapes = new ArrayList<>();
         mRandom = new Random();
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
@@ -135,27 +135,27 @@ class BlingView extends View {
         isAutoHide = autoHide;
     }
 
-    private void createShapes(int shapeType){
+    private void createShapes(int shapeType) {
         cancelAnimator();
         mShapes.clear();
 
-        for (int i = 0; i < mShapeCount; i++){
+        for (int i = 0; i < mShapeCount; i++) {
             Shape shape = new Shape();
             shape.isActivated = true;
-            shape.radius = mRandom.nextFloat()*(mMaxRadius-mMinRadius) + mMinRadius;
+            shape.radius = mRandom.nextFloat() * (mMaxRadius - mMinRadius) + mMinRadius;
             shape.x = shape.radius + mRandom.nextInt((int) (getMeasuredWidth() - 2 * shape.radius));
             shape.y = -getMeasuredHeight() / 3 + mRandom.nextInt(getMeasuredHeight());
-            shape.speed = mRandom.nextFloat()*(mMaxSpeed-mMinSpeed) + mMinSpeed;
-            shape.rotation = mRandom.nextFloat()*(mMaxRotation-mMinRotation) + mMinRotation;
-            shape.rotationSpeed = mRandom.nextFloat()*(mMaxRotationSpeed-mMinRotationSpeed) + mMinRotationSpeed;
+            shape.speed = mRandom.nextFloat() * (mMaxSpeed - mMinSpeed) + mMinSpeed;
+            shape.rotation = mRandom.nextFloat() * (mMaxRotation - mMinRotation) + mMinRotation;
+            shape.rotationSpeed = mRandom.nextFloat() * (mMaxRotationSpeed - mMinRotationSpeed) + mMinRotationSpeed;
             shape.color = mColors[mRandom.nextInt(mColors.length)];
             shape.path = createShape(shape.radius, shape.x, shape.y, shapeType);
             mShapes.add(shape);
         }
     }
 
-    private Path createShape(float radius, float x, float y, int shapeType){
-        switch (shapeType){
+    private Path createShape(float radius, float x, float y, int shapeType) {
+        switch (shapeType) {
             case BlingType.STAR:
                 return createStarPath(radius, x, y);
 
@@ -172,12 +172,12 @@ class BlingView extends View {
         return createCirclePath(radius, x, y);
     }
 
-    private Path createMixedPath(float radius, float x, float y){
-        if (mMixedRandom == null){
+    private Path createMixedPath(float radius, float x, float y) {
+        if (mMixedRandom == null) {
             mMixedRandom = new Random();
         }
 
-        switch (mMixedRandom.nextInt(4)){
+        switch (mMixedRandom.nextInt(4)) {
             case 0:
                 return createCirclePath(radius, x, y);
             case 1:
@@ -191,18 +191,18 @@ class BlingView extends View {
         return createCirclePath(radius, x, y);
     }
 
-    private Path createCirclePath(float radius, float x, float y){
+    private Path createCirclePath(float radius, float x, float y) {
         Path path = new Path();
         path.addCircle(x, y, radius, Path.Direction.CW);
         return path;
     }
 
-    private Path createTriangle(float radius, float x, float y){
+    private Path createTriangle(float radius, float x, float y) {
         radius *= 2.5f;
         Path path = new Path();
         path.moveTo(radius, 0);
         path.lineTo(-radius / 2f, -radius / 2f);
-        path.lineTo(-radius / 2f, radius /2f);
+        path.lineTo(-radius / 2f, radius / 2f);
         path.lineTo(radius, 0);
 
         Matrix matrix = new Matrix();
@@ -212,7 +212,7 @@ class BlingView extends View {
         return path;
     }
 
-    private Path createRectPath(float radius, float x, float y){
+    private Path createRectPath(float radius, float x, float y) {
         Path path = new Path();
         path.addRect(x - radius * 2, y - radius,
                 x + radius * 2, y + radius, Path.Direction.CW);
@@ -220,19 +220,19 @@ class BlingView extends View {
         return path;
     }
 
-    private Path createStarPath(float radius, float x, float y){
+    private Path createStarPath(float radius, float x, float y) {
         Path path = new Path();
         float R = radius * 2;
         float r = radius;
 
         List<PointF> starPoints = new ArrayList<>();
-        for (int i = 0; i < 5; i++){
+        for (int i = 0; i < 5; i++) {
             double outerDoc = (18 + 72 * i) / 180d * Math.PI;
-            PointF pointF1 = new PointF((float) (Math.cos(outerDoc) * R) ,
-                    - (float) (Math.sin(outerDoc) * R));
+            PointF pointF1 = new PointF((float) (Math.cos(outerDoc) * R),
+                    -(float) (Math.sin(outerDoc) * R));
 
             double innerDoc = (54 + 72 * i) / 180d * Math.PI;
-            PointF pointF2 = new PointF((float)(Math.cos(innerDoc) * r) ,
+            PointF pointF2 = new PointF((float) (Math.cos(innerDoc) * r),
                     -(float) (Math.sin(innerDoc) * r));
 
             starPoints.add(pointF1);
@@ -240,7 +240,7 @@ class BlingView extends View {
         }
 
         path.moveTo(starPoints.get(0).x, starPoints.get(0).y);
-        for (int i = 1; i < starPoints.size(); i++){
+        for (int i = 1; i < starPoints.size(); i++) {
             path.lineTo(starPoints.get(i).x, starPoints.get(i).y);
         }
         path.lineTo(starPoints.get(0).x, starPoints.get(0).y);
@@ -252,7 +252,7 @@ class BlingView extends View {
         return path;
     }
 
-    private void startAnimation(){
+    private void startAnimation() {
         mValueAnimator = ValueAnimator.ofInt(0, mDuration);
         mValueAnimator.setDuration(mDuration);
         mValueAnimator.setInterpolator(mInterpolator);
@@ -261,8 +261,8 @@ class BlingView extends View {
         mValueAnimator.start();
     }
 
-    private void cancelAnimator(){
-        if (mValueAnimator != null){
+    private void cancelAnimator() {
+        if (mValueAnimator != null) {
             mValueAnimator.removeListener(mAnimatorListener);
             mValueAnimator.removeUpdateListener(mAnimatorUpdateListener);
 
@@ -276,12 +276,12 @@ class BlingView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        if (mShapes.isEmpty()){
+        if (mShapes.isEmpty()) {
             return;
         }
 
-        for (Shape shape : mShapes){
-            if (shape.isActivated){
+        for (Shape shape : mShapes) {
+            if (shape.isActivated) {
                 mMatrix.reset();
                 mDrawPath.reset();
                 mMatrix.postRotate(shape.rotation, shape.x, shape.y);
@@ -305,20 +305,20 @@ class BlingView extends View {
     public void release() {
         cancelAnimator();
         mShapes.clear();
-        if (getParent() != null){
+        if (getParent() != null) {
             try {
                 ((ViewGroup) getParent()).removeView(this);
-            }catch (Exception e){
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
     }
 
     private void onAnimatorUpdate(int animatedValue) {
-        for (Shape shape : mShapes){
+        for (Shape shape : mShapes) {
             shape.translateY = shape.y + shape.speed * animatedValue;
             shape.rotation += shape.rotationSpeed;
-            if (shape.y + shape.translateY - shape.radius > getMeasuredHeight()){
+            if (shape.y + shape.translateY - shape.radius > getMeasuredHeight()) {
                 shape.isActivated = false;
             }
         }
@@ -340,7 +340,7 @@ class BlingView extends View {
             }
 
             isShowing = false;
-            if (mBlingListener != null){
+            if (mBlingListener != null) {
                 mBlingListener.onEnd();
             }
         }
@@ -352,13 +352,13 @@ class BlingView extends View {
             setVisibility(VISIBLE);
 
             isShowing = true;
-            if (mBlingListener != null){
+            if (mBlingListener != null) {
                 mBlingListener.onBegin();
             }
         }
     };
 
-    private class Shape{
+    private class Shape {
         boolean isActivated;
         float x;
         float y;

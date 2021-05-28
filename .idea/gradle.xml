@@ -10,8 +10,10 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/RoomObserveKotlin" />
+            <option value="$PROJECT_DIR$/SQLite" />
             <option value="$PROJECT_DIR$/advanceUI" />
-            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/androidbasic" />
             <option value="$PROJECT_DIR$/dialog" />
             <option value="$PROJECT_DIR$/fragment" />
             <option value="$PROJECT_DIR$/framework" />

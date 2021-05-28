@@ -1,7 +1,9 @@
 include ':dialog'
 include ':fragment'
-include ':app'
+include ':androidbasic'
 rootProject.name = "AndroidExample"
 include ':framework'
 include ':simple'
 include ':advanceUI'
+include ':RoomObserveKotlin'
+include ':SQLite'
