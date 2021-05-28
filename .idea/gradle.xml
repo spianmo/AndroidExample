@@ -10,14 +10,14 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/AdvanceUI" />
+            <option value="$PROJECT_DIR$/AndroidBasic" />
+            <option value="$PROJECT_DIR$/Dialog" />
+            <option value="$PROJECT_DIR$/Fragment" />
+            <option value="$PROJECT_DIR$/Framework" />
             <option value="$PROJECT_DIR$/RoomObserveKotlin" />
             <option value="$PROJECT_DIR$/SQLite" />
-            <option value="$PROJECT_DIR$/advanceUI" />
-            <option value="$PROJECT_DIR$/androidbasic" />
-            <option value="$PROJECT_DIR$/dialog" />
-            <option value="$PROJECT_DIR$/fragment" />
-            <option value="$PROJECT_DIR$/framework" />
-            <option value="$PROJECT_DIR$/simple" />
+            <option value="$PROJECT_DIR$/Simple" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
