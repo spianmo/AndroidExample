@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+import com.kirshi.advance.MainActivity;
 import com.kirshi.advance.databinding.FragmentDashboardBinding;
 import com.kirshi.framework.base.BaseFragment;
 
@@ -51,5 +52,13 @@ public class DashboardFragment extends BaseFragment<FragmentDashboardBinding> {
         public CharSequence getPageTitle(int position) {
             return "Tab " + position;
         }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        ((MainActivity) getActivity()).setFabClickEvent(v -> {
+            ((MainActivity) getActivity()).showSnackBar("DashboardFragment");
+        });
     }
 }

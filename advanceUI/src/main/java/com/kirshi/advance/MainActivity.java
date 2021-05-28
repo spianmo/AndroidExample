@@ -55,11 +55,6 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
         getSupportActionBar().setSubtitle(v.navigation.getMenu().getItem(0).getTitle());
     }
 
-    public void onFabClicked(View view) {
-        showSnackBar("是否新增一条短信？", v -> {
-            notificationFragment.addSmsItem();
-        });
-    }
 
     private void bindNavigationDrawer() {
         final ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, v.drawerLayout, v.toolbar,
@@ -194,5 +189,9 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
         Snackbar snackbar = Snackbar.make(v.container, message, Snackbar.LENGTH_SHORT);
         runOnUI(snackbar::show);
         return snackbar;
+    }
+
+    public void setFabClickEvent(View.OnClickListener onClickListener) {
+        v.floatingActionButton.setOnClickListener(onClickListener);
     }
 }

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kirito666.room"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="23"
+        android:targetSdkVersion="30" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:extractNativeLibs="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name="com.kirito666.room.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.glance.guolindev.ui.db.DBActivity"
+            android:icon="@mipmap/glance_library_ic_launcher"
+            android:label="@string/glance_library_glance"
+            android:roundIcon="@mipmap/glance_library_ic_launcher_round"
+            android:taskAffinity="com.glance.guolindev.com.kirito666.room"
+            android:theme="@style/GlanceLibraryActivityTheme" />
+
+        <activity-alias
+            android:name="com.glance.guolindev.ui.db.DBActivityLauncher"
+            android:icon="@mipmap/glance_library_ic_launcher"
+            android:label="@string/glance_library_glance"
+            android:targetActivity="com.glance.guolindev.ui.db.DBActivity"
+            android:taskAffinity="com.glance.guolindev.com.kirito666.room" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity
+            android:name="com.glance.guolindev.ui.table.TableActivity"
+            android:exported="false"
+            android:theme="@style/GlanceLibraryActivityTheme" />
+        <activity
+            android:name="com.glance.guolindev.ui.data.DataActivity"
+            android:exported="false"
+            android:theme="@style/GlanceLibraryActivityTheme" />
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="com.kirito666.room.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="com.glance.guolindev.initializer.GlanceInitializer"
+                android:value="androidx.startup" />
+        </provider>
+
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:directBootAware="true"
+            android:exported="false" />
+
+        <provider
+            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+            android:authorities="com.kirito666.room.lifecycle-process"
+            android:exported="false"
+            android:multiprocess="true" />
+    </application>
+
+</manifest>

@@ -3,6 +3,7 @@ package com.kirshi.advance.fragment;
 import androidx.annotation.NonNull;
 
 import com.google.android.material.slider.Slider;
+import com.kirshi.advance.MainActivity;
 import com.kirshi.advance.databinding.FragmentHomeBinding;
 import com.kirshi.advance.utils.DensityUtil;
 import com.kirshi.framework.base.BaseFragment;
@@ -39,6 +40,14 @@ public class HomeFragment extends BaseFragment<FragmentHomeBinding> {
             public void onValueChange(@NonNull @NotNull Slider slider, float value, boolean fromUser) {
                 v.card.setContentPadding((int) value, (int) value, (int) value, (int) value);
             }
+        });
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        ((MainActivity) getActivity()).setFabClickEvent(v -> {
+            ((MainActivity) getActivity()).showSnackBar("HomeFragment");
         });
     }
 

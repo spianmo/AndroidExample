@@ -6,6 +6,7 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.kirshi.advance.MainActivity;
 import com.kirshi.advance.R;
 import com.kirshi.advance.databinding.FragmentDashboradChildBinding;
 import com.kirshi.framework.base.BaseFragment;
@@ -34,5 +35,13 @@ public class DashboradChildFragment extends BaseFragment<FragmentDashboradChildB
     @Override
     public void inCreateView() {
 
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        ((MainActivity) getActivity()).setFabClickEvent(v -> {
+            ((MainActivity) getActivity()).showSnackBar("DashboradChildFragment");
+        });
     }
 }

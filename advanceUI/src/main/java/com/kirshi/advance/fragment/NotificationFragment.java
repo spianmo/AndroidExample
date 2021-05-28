@@ -2,6 +2,7 @@ package com.kirshi.advance.fragment;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import com.kirshi.advance.MainActivity;
 import com.kirshi.advance.adapter.MessageAdapter;
 import com.kirshi.advance.databinding.FragmentNotificationBinding;
 import com.kirshi.advance.pojo.SmsMessage;
@@ -34,5 +35,15 @@ public class NotificationFragment extends BaseFragment<FragmentNotificationBindi
     public void addSmsItem() {
         smsList.add(SmsMessage.random(mContext));
         adapter.refresh();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        ((MainActivity) getActivity()).setFabClickEvent(v -> {
+            ((MainActivity) getActivity()).showSnackBar("是否新增一条短信？", view -> {
+                addSmsItem();
+            });
+        });
     }
 }
