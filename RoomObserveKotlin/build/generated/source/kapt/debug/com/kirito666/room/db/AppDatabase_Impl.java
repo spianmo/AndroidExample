@@ -3,13 +3,19 @@ package com.kirito666.room.db;
 import androidx.room.DatabaseConfiguration;
 import androidx.room.InvalidationTracker;
 import androidx.room.RoomOpenHelper;
+import androidx.room.RoomOpenHelper.Delegate;
+import androidx.room.RoomOpenHelper.ValidationResult;
 import androidx.room.util.DBUtil;
 import androidx.room.util.TableInfo;
+import androidx.room.util.TableInfo.Column;
+import androidx.room.util.TableInfo.ForeignKey;
+import androidx.room.util.TableInfo.Index;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 import androidx.sqlite.db.SupportSQLiteOpenHelper;
-
+import androidx.sqlite.db.SupportSQLiteOpenHelper.Callback;
+import androidx.sqlite.db.SupportSQLiteOpenHelper.Configuration;
 import com.kirito666.room.dao.CourseDao;
-
+import com.kirito666.room.dao.CourseDao_Impl;
 import java.lang.Class;
 import java.lang.Override;
 import java.lang.String;
@@ -22,8 +28,6 @@ import java.util.Set;
 
 @SuppressWarnings({"unchecked", "deprecation"})
 public final class AppDatabase_Impl extends AppDatabase {
-  private volatile StudentDao _studentDao;
-
   private volatile CourseDao _courseDao;
 
   @Override
@@ -31,15 +35,13 @@ public final class AppDatabase_Impl extends AppDatabase {
     final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(1) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `Student` (`name` TEXT NOT NULL, `clazz` TEXT NOT NULL, `age` INTEGER NOT NULL, `id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `CourseModel` (`uid` TEXT, `cid` INTEGER PRIMARY KEY AUTOINCREMENT, `cname` TEXT, `schoolYear` TEXT, `term` TEXT, `credit` REAL NOT NULL, `startSection` INTEGER NOT NULL, `endSection` INTEGER NOT NULL, `startWeek` INTEGER NOT NULL, `endWeek` INTEGER NOT NULL, `dayOfWeek` INTEGER NOT NULL, `classroom` TEXT, `teacher` TEXT)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '7cd282cd3d79a7fafd52b607d38b2ce1')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'acbe85d87f4f53b7e086c565b2f7217a')");
       }
 
       @Override
       public void dropAllTables(SupportSQLiteDatabase _db) {
-        _db.execSQL("DROP TABLE IF EXISTS `Student`");
         _db.execSQL("DROP TABLE IF EXISTS `CourseModel`");
         if (mCallbacks != null) {
           for (int _i = 0, _size = mCallbacks.size(); _i < _size; _i++) {
@@ -79,20 +81,6 @@ public final class AppDatabase_Impl extends AppDatabase {
 
       @Override
       protected RoomOpenHelper.ValidationResult onValidateSchema(SupportSQLiteDatabase _db) {
-        final HashMap<String, TableInfo.Column> _columnsStudent = new HashMap<String, TableInfo.Column>(4);
-        _columnsStudent.put("name", new TableInfo.Column("name", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsStudent.put("clazz", new TableInfo.Column("clazz", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsStudent.put("age", new TableInfo.Column("age", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsStudent.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
-        final HashSet<TableInfo.ForeignKey> _foreignKeysStudent = new HashSet<TableInfo.ForeignKey>(0);
-        final HashSet<TableInfo.Index> _indicesStudent = new HashSet<TableInfo.Index>(0);
-        final TableInfo _infoStudent = new TableInfo("Student", _columnsStudent, _foreignKeysStudent, _indicesStudent);
-        final TableInfo _existingStudent = TableInfo.read(_db, "Student");
-        if (! _infoStudent.equals(_existingStudent)) {
-          return new RoomOpenHelper.ValidationResult(false, "Student(com.kirito666.room.db.Student).\n"
-                  + " Expected:\n" + _infoStudent + "\n"
-                  + " Found:\n" + _existingStudent);
-        }
         final HashMap<String, TableInfo.Column> _columnsCourseModel = new HashMap<String, TableInfo.Column>(13);
         _columnsCourseModel.put("uid", new TableInfo.Column("uid", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsCourseModel.put("cid", new TableInfo.Column("cid", "INTEGER", false, 1, null, TableInfo.CREATED_FROM_ENTITY));
@@ -118,7 +106,7 @@ public final class AppDatabase_Impl extends AppDatabase {
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "7cd282cd3d79a7fafd52b607d38b2ce1", "47c77489c87ce84b2d34e8c5cb20e3c6");
+    }, "acbe85d87f4f53b7e086c565b2f7217a", "a72ad70d0719677ce926029063c36633");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)
@@ -131,7 +119,7 @@ public final class AppDatabase_Impl extends AppDatabase {
   protected InvalidationTracker createInvalidationTracker() {
     final HashMap<String, String> _shadowTablesMap = new HashMap<String, String>(0);
     HashMap<String, Set<String>> _viewTables = new HashMap<String, Set<String>>(0);
-    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "Student","CourseModel");
+    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "CourseModel");
   }
 
   @Override
@@ -140,7 +128,6 @@ public final class AppDatabase_Impl extends AppDatabase {
     final SupportSQLiteDatabase _db = super.getOpenHelper().getWritableDatabase();
     try {
       super.beginTransaction();
-      _db.execSQL("DELETE FROM `Student`");
       _db.execSQL("DELETE FROM `CourseModel`");
       super.setTransactionSuccessful();
     } finally {
@@ -155,23 +142,8 @@ public final class AppDatabase_Impl extends AppDatabase {
   @Override
   protected Map<Class<?>, List<Class<?>>> getRequiredTypeConverters() {
     final HashMap<Class<?>, List<Class<?>>> _typeConvertersMap = new HashMap<Class<?>, List<Class<?>>>();
-    _typeConvertersMap.put(StudentDao.class, StudentDao_Impl.getRequiredConverters());
     _typeConvertersMap.put(CourseDao.class, CourseDao_Impl.getRequiredConverters());
     return _typeConvertersMap;
-  }
-
-  @Override
-  public StudentDao studentDao() {
-    if (_studentDao != null) {
-      return _studentDao;
-    } else {
-      synchronized(this) {
-        if(_studentDao == null) {
-          _studentDao = new StudentDao_Impl(this);
-        }
-        return _studentDao;
-      }
-    }
   }
 
   @Override

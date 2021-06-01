@@ -7,6 +7,10 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="colorOnSecondary">@color/white</item>
+        <item name="android:textColor">@android:color/darker_gray</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:navigationBarColor">#01ffffff</item>
     </style>
 
 </resources>
