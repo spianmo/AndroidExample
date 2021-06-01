@@ -3,7 +3,7 @@ package com.kirito666.room
 import android.annotation.SuppressLint
 import android.os.Bundle
 import com.kirito666.room.base.BaseActivity
-import com.kirito666.room.component.CourseModel
+import com.kirito666.room.pojo.CourseModel
 import com.kirito666.room.util.DateUtil
 import kotlinx.android.synthetic.main.activity_course.*
 

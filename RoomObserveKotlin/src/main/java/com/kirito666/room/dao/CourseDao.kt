@@ -1,11 +1,11 @@
-package com.kirito666.room.db
+package com.kirito666.room.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
-import com.kirito666.room.component.CourseModel
+import com.kirito666.room.pojo.CourseModel
 
 @Dao
 interface CourseDao {

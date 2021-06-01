@@ -1,4 +1,4 @@
-package com.kirito666.room.component
+package com.kirito666.room.pojo
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

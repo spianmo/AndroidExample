@@ -9,7 +9,9 @@ import androidx.room.RoomSQLiteQuery;
 import androidx.room.util.CursorUtil;
 import androidx.room.util.DBUtil;
 import androidx.sqlite.db.SupportSQLiteStatement;
-import com.kirito666.room.component.CourseModel;
+import com.kirito666.room.pojo.CourseModel;
+import com.kirito666.room.dao.CourseDao;
+
 import java.lang.Class;
 import java.lang.Exception;
 import java.lang.Long;

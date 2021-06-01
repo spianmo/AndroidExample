@@ -3,17 +3,13 @@ package com.kirito666.room.db;
 import androidx.room.DatabaseConfiguration;
 import androidx.room.InvalidationTracker;
 import androidx.room.RoomOpenHelper;
-import androidx.room.RoomOpenHelper.Delegate;
-import androidx.room.RoomOpenHelper.ValidationResult;
 import androidx.room.util.DBUtil;
 import androidx.room.util.TableInfo;
-import androidx.room.util.TableInfo.Column;
-import androidx.room.util.TableInfo.ForeignKey;
-import androidx.room.util.TableInfo.Index;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 import androidx.sqlite.db.SupportSQLiteOpenHelper;
-import androidx.sqlite.db.SupportSQLiteOpenHelper.Callback;
-import androidx.sqlite.db.SupportSQLiteOpenHelper.Configuration;
+
+import com.kirito666.room.dao.CourseDao;
+
 import java.lang.Class;
 import java.lang.Override;
 import java.lang.String;
@@ -116,7 +112,7 @@ public final class AppDatabase_Impl extends AppDatabase {
         final TableInfo _infoCourseModel = new TableInfo("CourseModel", _columnsCourseModel, _foreignKeysCourseModel, _indicesCourseModel);
         final TableInfo _existingCourseModel = TableInfo.read(_db, "CourseModel");
         if (! _infoCourseModel.equals(_existingCourseModel)) {
-          return new RoomOpenHelper.ValidationResult(false, "CourseModel(com.kirito666.room.component.CourseModel).\n"
+          return new RoomOpenHelper.ValidationResult(false, "CourseModel(com.kirito666.room.pojo.CourseModel).\n"
                   + " Expected:\n" + _infoCourseModel + "\n"
                   + " Found:\n" + _existingCourseModel);
         }

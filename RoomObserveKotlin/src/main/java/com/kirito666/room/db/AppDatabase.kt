@@ -4,14 +4,14 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.kirito666.room.component.CourseModel
+import com.kirito666.room.dao.CourseDao
+import com.kirito666.room.pojo.CourseModel
 
 /**
  * @author Finger
  */
-@Database(entities = [Student::class, CourseModel::class], version = 1, exportSchema = false)
+@Database(entities = [CourseModel::class], version = 1, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun studentDao(): StudentDao
     abstract fun courseDao(): CourseDao
 
     companion object {
@@ -27,7 +27,7 @@ abstract class AppDatabase : RoomDatabase() {
             Room.databaseBuilder(
                 context.applicationContext,
                 AppDatabase::class.java,
-                "counter-db"
+                "course-db"
             )
                 .fallbackToDestructiveMigration()
                 .build()
