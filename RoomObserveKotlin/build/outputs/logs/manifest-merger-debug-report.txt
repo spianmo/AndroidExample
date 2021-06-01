@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:2:1-21:12
-INJECTED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:2:1-21:12
-INJECTED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:2:1-21:12
-INJECTED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:2:1-21:12
+ADDED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:2:1-28:12
 MERGED from [com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:2:1-52:12
 MERGED from [androidx.databinding:viewbinding:4.2.1] D:\.gradle\caches\transforms-2\files-2.1\4a1792cde01aad4245f43ff82056ba9b\jetified-viewbinding-4.2.1\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.material:material:1.3.0] D:\.gradle\caches\transforms-2\files-2.1\24e32edab99f679786b4b758616d3384\material-1.3.0\AndroidManifest.xml:17:1-24:12
@@ -54,25 +54,25 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] D:\.gradle\caches\transfo
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\78563e28f0bbab05bfc0a628eb13c65c\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\a32bb96eb0e6dd1173a84a76cfb9a914\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] D:\.gradle\caches\transforms-2\files-2.1\fc3674e466dabfec9f689a4b0626a27e\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
-INJECTED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:2:1-21:12
-INJECTED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:2:1-21:12
-INJECTED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:2:1-21:12
+INJECTED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:2:1-28:12
 	package
 		ADDED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:3:5-33
 		INJECTED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml
 		INJECTED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml
-		ADDED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:2:1-21:12
+		ADDED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:2:1-28:12
 		INJECTED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml
-		ADDED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:2:1-21:12
+		ADDED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:2:1-28:12
 		INJECTED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:5:5-19:19
+ADDED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:5:5-26:19
 MERGED from [com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:10:5-50:19
 MERGED from [com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:10:5-50:19
 MERGED from [com.google.android.material:material:1.3.0] D:\.gradle\caches\transforms-2\files-2.1\24e32edab99f679786b4b758616d3384\material-1.3.0\AndroidManifest.xml:22:5-20
@@ -105,10 +105,10 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] D:\.gradle\
 		ADDED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:6:9-35
 	android:theme
 		ADDED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:11:9-40
-activity#com.kirito666.room.MainActivity
+activity#com.kirito666.room.CourseActivity
 ADDED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:12:9-18:20
 	android:name
-		ADDED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:12:19-65
+		ADDED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:12:19-49
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:13:13-17:29
 action#android.intent.action.MAIN
@@ -119,6 +119,10 @@ category#android.intent.category.LAUNCHER
 ADDED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:16:17-77
 	android:name
 		ADDED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:16:27-74
+activity#com.kirito666.room.MainActivity
+ADDED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:19:9-25:20
+	android:name
+		ADDED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:19:19-47
 uses-sdk
 INJECTED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml

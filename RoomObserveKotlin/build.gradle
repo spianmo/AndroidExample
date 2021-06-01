@@ -44,10 +44,13 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     implementation 'androidx.room:room-runtime:2.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     kapt 'androidx.room:room-ktx:2.3.0'
     kapt 'androidx.room:room-compiler:2.3.0'
 
     debugImplementation 'com.glance.guolindev:glance:1.0.0'
+    implementation 'org.projectlombok:lombok:1.18.20'
+    annotationProcessor 'org.projectlombok:lombok:1.18.20'
 }
 repositories {
     mavenCentral()

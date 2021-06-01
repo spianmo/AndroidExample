@@ -28,19 +28,23 @@ import java.util.Set;
 public final class AppDatabase_Impl extends AppDatabase {
   private volatile StudentDao _studentDao;
 
+  private volatile CourseDao _courseDao;
+
   @Override
   protected SupportSQLiteOpenHelper createOpenHelper(DatabaseConfiguration configuration) {
     final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(1) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
         _db.execSQL("CREATE TABLE IF NOT EXISTS `Student` (`name` TEXT NOT NULL, `clazz` TEXT NOT NULL, `age` INTEGER NOT NULL, `id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `CourseModel` (`uid` TEXT, `cid` INTEGER PRIMARY KEY AUTOINCREMENT, `cname` TEXT, `schoolYear` TEXT, `term` TEXT, `credit` REAL NOT NULL, `startSection` INTEGER NOT NULL, `endSection` INTEGER NOT NULL, `startWeek` INTEGER NOT NULL, `endWeek` INTEGER NOT NULL, `dayOfWeek` INTEGER NOT NULL, `classroom` TEXT, `teacher` TEXT)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '802e5cda6e91e22549c8e4e478b8b4dd')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '7cd282cd3d79a7fafd52b607d38b2ce1')");
       }
 
       @Override
       public void dropAllTables(SupportSQLiteDatabase _db) {
         _db.execSQL("DROP TABLE IF EXISTS `Student`");
+        _db.execSQL("DROP TABLE IF EXISTS `CourseModel`");
         if (mCallbacks != null) {
           for (int _i = 0, _size = mCallbacks.size(); _i < _size; _i++) {
             mCallbacks.get(_i).onDestructiveMigration(_db);
@@ -93,9 +97,32 @@ public final class AppDatabase_Impl extends AppDatabase {
                   + " Expected:\n" + _infoStudent + "\n"
                   + " Found:\n" + _existingStudent);
         }
+        final HashMap<String, TableInfo.Column> _columnsCourseModel = new HashMap<String, TableInfo.Column>(13);
+        _columnsCourseModel.put("uid", new TableInfo.Column("uid", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsCourseModel.put("cid", new TableInfo.Column("cid", "INTEGER", false, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsCourseModel.put("cname", new TableInfo.Column("cname", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsCourseModel.put("schoolYear", new TableInfo.Column("schoolYear", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsCourseModel.put("term", new TableInfo.Column("term", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsCourseModel.put("credit", new TableInfo.Column("credit", "REAL", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsCourseModel.put("startSection", new TableInfo.Column("startSection", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsCourseModel.put("endSection", new TableInfo.Column("endSection", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsCourseModel.put("startWeek", new TableInfo.Column("startWeek", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsCourseModel.put("endWeek", new TableInfo.Column("endWeek", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsCourseModel.put("dayOfWeek", new TableInfo.Column("dayOfWeek", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsCourseModel.put("classroom", new TableInfo.Column("classroom", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsCourseModel.put("teacher", new TableInfo.Column("teacher", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysCourseModel = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesCourseModel = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoCourseModel = new TableInfo("CourseModel", _columnsCourseModel, _foreignKeysCourseModel, _indicesCourseModel);
+        final TableInfo _existingCourseModel = TableInfo.read(_db, "CourseModel");
+        if (! _infoCourseModel.equals(_existingCourseModel)) {
+          return new RoomOpenHelper.ValidationResult(false, "CourseModel(com.kirito666.room.component.CourseModel).\n"
+                  + " Expected:\n" + _infoCourseModel + "\n"
+                  + " Found:\n" + _existingCourseModel);
+        }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "802e5cda6e91e22549c8e4e478b8b4dd", "ea92508a865440243040a50cd3d4e602");
+    }, "7cd282cd3d79a7fafd52b607d38b2ce1", "47c77489c87ce84b2d34e8c5cb20e3c6");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)
@@ -108,7 +135,7 @@ public final class AppDatabase_Impl extends AppDatabase {
   protected InvalidationTracker createInvalidationTracker() {
     final HashMap<String, String> _shadowTablesMap = new HashMap<String, String>(0);
     HashMap<String, Set<String>> _viewTables = new HashMap<String, Set<String>>(0);
-    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "Student");
+    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "Student","CourseModel");
   }
 
   @Override
@@ -118,6 +145,7 @@ public final class AppDatabase_Impl extends AppDatabase {
     try {
       super.beginTransaction();
       _db.execSQL("DELETE FROM `Student`");
+      _db.execSQL("DELETE FROM `CourseModel`");
       super.setTransactionSuccessful();
     } finally {
       super.endTransaction();
@@ -132,11 +160,12 @@ public final class AppDatabase_Impl extends AppDatabase {
   protected Map<Class<?>, List<Class<?>>> getRequiredTypeConverters() {
     final HashMap<Class<?>, List<Class<?>>> _typeConvertersMap = new HashMap<Class<?>, List<Class<?>>>();
     _typeConvertersMap.put(StudentDao.class, StudentDao_Impl.getRequiredConverters());
+    _typeConvertersMap.put(CourseDao.class, CourseDao_Impl.getRequiredConverters());
     return _typeConvertersMap;
   }
 
   @Override
-  public StudentDao sampleDao() {
+  public StudentDao studentDao() {
     if (_studentDao != null) {
       return _studentDao;
     } else {
@@ -145,6 +174,20 @@ public final class AppDatabase_Impl extends AppDatabase {
           _studentDao = new StudentDao_Impl(this);
         }
         return _studentDao;
+      }
+    }
+  }
+
+  @Override
+  public CourseDao courseDao() {
+    if (_courseDao != null) {
+      return _courseDao;
+    } else {
+      synchronized(this) {
+        if(_courseDao == null) {
+          _courseDao = new CourseDao_Impl(this);
+        }
+        return _courseDao;
       }
     }
   }

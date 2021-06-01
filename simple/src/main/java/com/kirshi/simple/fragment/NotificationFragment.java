@@ -6,9 +6,9 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.kirshi.advance.R;
+import com.kirshi.advance.databinding.FragmentNotificationBinding;
 import com.kirshi.framework.base.BaseFragment;
-import com.kirshi.simple.R;
-import com.kirshi.simple.databinding.FragmentNotificationBinding;
 
 
 public class NotificationFragment extends BaseFragment<FragmentNotificationBinding> {

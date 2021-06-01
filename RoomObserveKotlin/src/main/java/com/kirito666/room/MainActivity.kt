@@ -1,6 +1,7 @@
 package com.kirito666.room
 
 import android.os.Bundle
+import com.kirito666.room.base.BaseActivity
 import com.kirito666.room.db.AppDatabase
 import com.kirito666.room.db.Student
 import kotlinx.android.synthetic.main.activity_main.*
@@ -19,7 +20,7 @@ class MainActivity : BaseActivity() {
             GlobalScope.launch(errorHandler) {
                 withContext(Dispatchers.IO) {
                     AppDatabase.getInstance(applicationContext)
-                        .sampleDao()
+                        .studentDao()
                         .insert(Student("Kirito666", "Software2036", 22))
                 }
             }
@@ -29,7 +30,7 @@ class MainActivity : BaseActivity() {
             GlobalScope.launch(errorHandler) {
                 withContext(Dispatchers.IO) {
                     AppDatabase.getInstance(applicationContext)
-                        .sampleDao()
+                        .studentDao()
                         .delete(Student("Shinonon66", "Software2036", 21, 1))
                 }
             }
@@ -39,7 +40,7 @@ class MainActivity : BaseActivity() {
             GlobalScope.launch(errorHandler) {
                 withContext(Dispatchers.IO) {
                     AppDatabase.getInstance(applicationContext)
-                        .sampleDao()
+                        .studentDao()
                         .update(Student("Shinonon66", "Software2036", 21, 1))
                 }
             }
@@ -49,13 +50,13 @@ class MainActivity : BaseActivity() {
             GlobalScope.launch(errorHandler) {
                 withContext(Dispatchers.IO) {
                     AppDatabase.getInstance(applicationContext)
-                        .sampleDao()
+                        .studentDao()
                         .getById(1)
                 }
             }
         }
 
-        AppDatabase.getInstance(applicationContext).sampleDao().allStudent.observe(
+        AppDatabase.getInstance(applicationContext).studentDao().allStudent.observe(
             this, { counter ->
                 tv_result.text = counter.toString()
             })
