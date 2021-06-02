@@ -11,129 +11,137 @@
 9-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml
 10
 11    <application
-11-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:5:5-19:19
-12        android:allowBackup="true"
-12-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:6:9-35
-13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-13-->[androidx.core:core:1.5.0] D:\.gradle\caches\transforms-2\files-2.1\e983e1f7b8f49816f6c6a3af5fa8c568\core-1.5.0\AndroidManifest.xml:24:18-86
-14        android:debuggable="true"
-15        android:extractNativeLibs="false"
-16        android:icon="@mipmap/ic_launcher"
-16-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:7:9-43
-17        android:label="@string/app_name"
-17-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:8:9-41
-18        android:roundIcon="@mipmap/ic_launcher_round"
-18-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:9:9-54
-19        android:supportsRtl="true"
-19-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:10:9-35
-20        android:testOnly="true"
-21        android:theme="@style/AppTheme" >
-21-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:11:9-40
-22        <activity android:name="com.kirito666.room.CourseActivity" >
-22-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:12:9-18:20
-22-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:12:19-49
-23            <intent-filter>
-23-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:13:13-17:29
-24                <action android:name="android.intent.action.MAIN" />
-24-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:14:17-69
-24-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:14:25-66
-25
-26                <category android:name="android.intent.category.LAUNCHER" />
-26-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:16:17-77
-26-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:16:27-74
-27            </intent-filter>
-28        </activity>
-29        <activity
-29-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:11:9-17:65
-30            android:name="com.glance.guolindev.ui.db.DBActivity"
-30-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:12:13-65
-31            android:icon="@mipmap/glance_library_ic_launcher"
-31-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:13:13-62
-32            android:label="@string/glance_library_glance"
-32-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:14:13-58
-33            android:roundIcon="@mipmap/glance_library_ic_launcher_round"
-33-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:15:13-73
-34            android:taskAffinity="com.glance.guolindev.com.kirito666.room"
-34-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:16:13-73
-35            android:theme="@style/GlanceLibraryActivityTheme" />
-35-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:17:13-62
-36
-37        <activity-alias
-37-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:19:9-30:26
-38            android:name="com.glance.guolindev.ui.db.DBActivityLauncher"
-38-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:20:13-73
-39            android:icon="@mipmap/glance_library_ic_launcher"
-39-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:21:13-62
-40            android:label="@string/glance_library_glance"
-40-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:22:13-58
-41            android:targetActivity="com.glance.guolindev.ui.db.DBActivity"
-41-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:23:13-75
-42            android:taskAffinity="com.glance.guolindev.com.kirito666.room" >
-42-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:24:13-73
-43            <intent-filter>
-43-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:13:13-17:29
-44                <action android:name="android.intent.action.MAIN" />
-44-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:14:17-69
-44-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:14:25-66
-45
-46                <category android:name="android.intent.category.LAUNCHER" />
-46-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:16:17-77
-46-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:16:27-74
-47            </intent-filter>
-48        </activity-alias>
+11-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:5:5-21:19
+12        android:name="com.kirito666.room.App"
+12-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:11:9-28
+13        android:allowBackup="true"
+13-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:6:9-35
+14        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+14-->[androidx.core:core:1.5.0] D:\.gradle\caches\transforms-2\files-2.1\e983e1f7b8f49816f6c6a3af5fa8c568\core-1.5.0\AndroidManifest.xml:24:18-86
+15        android:debuggable="true"
+16        android:extractNativeLibs="false"
+17        android:icon="@mipmap/ic_launcher"
+17-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:7:9-43
+18        android:label="@string/app_name"
+18-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:8:9-41
+19        android:roundIcon="@mipmap/ic_launcher_round"
+19-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:9:9-54
+20        android:supportsRtl="true"
+20-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:10:9-35
+21        android:testOnly="true"
+22        android:theme="@style/AppTheme" >
+22-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:12:9-40
+23        <activity
+23-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:13:9-97
+24            android:name="com.kirito666.room.ui.AddCourseActivity"
+24-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:13:19-55
+25            android:windowSoftInputMode="adjustPan" />
+25-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:13:56-95
+26        <activity android:name="com.kirito666.room.ui.CourseActivity" >
+26-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:14:9-20:20
+26-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:14:19-52
+27            <intent-filter>
+27-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:15:13-19:29
+28                <action android:name="android.intent.action.MAIN" />
+28-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:16:17-69
+28-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:16:25-66
+29
+30                <category android:name="android.intent.category.LAUNCHER" />
+30-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:18:17-77
+30-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:18:27-74
+31            </intent-filter>
+32        </activity>
+33        <activity
+33-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:11:9-17:65
+34            android:name="com.glance.guolindev.ui.db.DBActivity"
+34-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:12:13-65
+35            android:icon="@mipmap/glance_library_ic_launcher"
+35-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:13:13-62
+36            android:label="@string/glance_library_glance"
+36-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:14:13-58
+37            android:roundIcon="@mipmap/glance_library_ic_launcher_round"
+37-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:15:13-73
+38            android:taskAffinity="com.glance.guolindev.com.kirito666.room"
+38-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:16:13-73
+39            android:theme="@style/GlanceLibraryActivityTheme" />
+39-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:17:13-62
+40
+41        <activity-alias
+41-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:19:9-30:26
+42            android:name="com.glance.guolindev.ui.db.DBActivityLauncher"
+42-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:20:13-73
+43            android:icon="@mipmap/glance_library_ic_launcher"
+43-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:21:13-62
+44            android:label="@string/glance_library_glance"
+44-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:22:13-58
+45            android:targetActivity="com.glance.guolindev.ui.db.DBActivity"
+45-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:23:13-75
+46            android:taskAffinity="com.glance.guolindev.com.kirito666.room" >
+46-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:24:13-73
+47            <intent-filter>
+47-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:15:13-19:29
+48                <action android:name="android.intent.action.MAIN" />
+48-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:16:17-69
+48-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:16:25-66
 49
-50        <activity
-50-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:32:9-35:65
-51            android:name="com.glance.guolindev.ui.table.TableActivity"
-51-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:33:13-71
-52            android:exported="false"
-52-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:34:13-37
-53            android:theme="@style/GlanceLibraryActivityTheme" />
-53-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:35:13-62
+50                <category android:name="android.intent.category.LAUNCHER" />
+50-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:18:17-77
+50-->D:\JetBrainProjects\AndroidExample\RoomObserveKotlin\src\main\AndroidManifest.xml:18:27-74
+51            </intent-filter>
+52        </activity-alias>
+53
 54        <activity
-54-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:36:9-39:65
-55            android:name="com.glance.guolindev.ui.data.DataActivity"
-55-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:37:13-69
+54-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:32:9-35:65
+55            android:name="com.glance.guolindev.ui.table.TableActivity"
+55-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:33:13-71
 56            android:exported="false"
-56-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:38:13-37
+56-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:34:13-37
 57            android:theme="@style/GlanceLibraryActivityTheme" />
-57-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:39:13-62
-58
-59        <provider
-59-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:41:9-49:20
-60            android:name="androidx.startup.InitializationProvider"
-60-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:42:13-67
-61            android:authorities="com.kirito666.room.androidx-startup"
-61-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:43:13-68
-62            android:exported="false" >
-62-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:44:13-37
-63            <meta-data
-63-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:46:13-48:52
-64                android:name="com.glance.guolindev.initializer.GlanceInitializer"
-64-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:47:17-82
-65                android:value="androidx.startup" />
-65-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:48:17-49
-66        </provider>
-67
-68        <service
-68-->[androidx.room:room-runtime:2.3.0] D:\.gradle\caches\transforms-2\files-2.1\c541693e051a091f07bdbaa6088ede46\room-runtime-2.3.0\AndroidManifest.xml:25:9-28:40
-69            android:name="androidx.room.MultiInstanceInvalidationService"
-69-->[androidx.room:room-runtime:2.3.0] D:\.gradle\caches\transforms-2\files-2.1\c541693e051a091f07bdbaa6088ede46\room-runtime-2.3.0\AndroidManifest.xml:26:13-74
-70            android:directBootAware="true"
-70-->[androidx.room:room-runtime:2.3.0] D:\.gradle\caches\transforms-2\files-2.1\c541693e051a091f07bdbaa6088ede46\room-runtime-2.3.0\AndroidManifest.xml:27:13-43
-71            android:exported="false" />
-71-->[androidx.room:room-runtime:2.3.0] D:\.gradle\caches\transforms-2\files-2.1\c541693e051a091f07bdbaa6088ede46\room-runtime-2.3.0\AndroidManifest.xml:28:13-37
-72
-73        <provider
-73-->[androidx.lifecycle:lifecycle-process:2.2.0] D:\.gradle\caches\transforms-2\files-2.1\a674eeb09163bb4a874d9047f814ccf7\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
-74            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-74-->[androidx.lifecycle:lifecycle-process:2.2.0] D:\.gradle\caches\transforms-2\files-2.1\a674eeb09163bb4a874d9047f814ccf7\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
-75            android:authorities="com.kirito666.room.lifecycle-process"
-75-->[androidx.lifecycle:lifecycle-process:2.2.0] D:\.gradle\caches\transforms-2\files-2.1\a674eeb09163bb4a874d9047f814ccf7\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
-76            android:exported="false"
-76-->[androidx.lifecycle:lifecycle-process:2.2.0] D:\.gradle\caches\transforms-2\files-2.1\a674eeb09163bb4a874d9047f814ccf7\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
-77            android:multiprocess="true" />
-77-->[androidx.lifecycle:lifecycle-process:2.2.0] D:\.gradle\caches\transforms-2\files-2.1\a674eeb09163bb4a874d9047f814ccf7\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
-78    </application>
-79
-80</manifest>
+57-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:35:13-62
+58        <activity
+58-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:36:9-39:65
+59            android:name="com.glance.guolindev.ui.data.DataActivity"
+59-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:37:13-69
+60            android:exported="false"
+60-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:38:13-37
+61            android:theme="@style/GlanceLibraryActivityTheme" />
+61-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:39:13-62
+62
+63        <provider
+63-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:41:9-49:20
+64            android:name="androidx.startup.InitializationProvider"
+64-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:42:13-67
+65            android:authorities="com.kirito666.room.androidx-startup"
+65-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:43:13-68
+66            android:exported="false" >
+66-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:44:13-37
+67            <meta-data
+67-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:46:13-48:52
+68                android:name="com.glance.guolindev.initializer.GlanceInitializer"
+68-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:47:17-82
+69                android:value="androidx.startup" />
+69-->[com.glance.guolindev:glance:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\7f3abfc16b5e78b4a702923a1f712454\jetified-glance-1.0.0\AndroidManifest.xml:48:17-49
+70        </provider>
+71
+72        <service
+72-->[androidx.room:room-runtime:2.3.0] D:\.gradle\caches\transforms-2\files-2.1\c541693e051a091f07bdbaa6088ede46\room-runtime-2.3.0\AndroidManifest.xml:25:9-28:40
+73            android:name="androidx.room.MultiInstanceInvalidationService"
+73-->[androidx.room:room-runtime:2.3.0] D:\.gradle\caches\transforms-2\files-2.1\c541693e051a091f07bdbaa6088ede46\room-runtime-2.3.0\AndroidManifest.xml:26:13-74
+74            android:directBootAware="true"
+74-->[androidx.room:room-runtime:2.3.0] D:\.gradle\caches\transforms-2\files-2.1\c541693e051a091f07bdbaa6088ede46\room-runtime-2.3.0\AndroidManifest.xml:27:13-43
+75            android:exported="false" />
+75-->[androidx.room:room-runtime:2.3.0] D:\.gradle\caches\transforms-2\files-2.1\c541693e051a091f07bdbaa6088ede46\room-runtime-2.3.0\AndroidManifest.xml:28:13-37
+76
+77        <provider
+77-->[androidx.lifecycle:lifecycle-process:2.2.0] D:\.gradle\caches\transforms-2\files-2.1\a674eeb09163bb4a874d9047f814ccf7\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
+78            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+78-->[androidx.lifecycle:lifecycle-process:2.2.0] D:\.gradle\caches\transforms-2\files-2.1\a674eeb09163bb4a874d9047f814ccf7\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
+79            android:authorities="com.kirito666.room.lifecycle-process"
+79-->[androidx.lifecycle:lifecycle-process:2.2.0] D:\.gradle\caches\transforms-2\files-2.1\a674eeb09163bb4a874d9047f814ccf7\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
+80            android:exported="false"
+80-->[androidx.lifecycle:lifecycle-process:2.2.0] D:\.gradle\caches\transforms-2\files-2.1\a674eeb09163bb4a874d9047f814ccf7\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
+81            android:multiprocess="true" />
+81-->[androidx.lifecycle:lifecycle-process:2.2.0] D:\.gradle\caches\transforms-2\files-2.1\a674eeb09163bb4a874d9047f814ccf7\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
+82    </application>
+83
+84</manifest>

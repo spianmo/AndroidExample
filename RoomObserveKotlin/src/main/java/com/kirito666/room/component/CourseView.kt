@@ -7,6 +7,7 @@ import android.graphics.RectF
 import android.util.AttributeSet
 import android.util.DisplayMetrics
 import android.view.Gravity
+import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.TextView
@@ -105,7 +106,7 @@ class CourseView @JvmOverloads constructor(
             tvItem.textSize = 13f
             tvItem.setOnClickListener {
                 if (::onCourseItemClickListener.isInitialized)
-                    onCourseItemClickListener.invoke(course)
+                    onCourseItemClickListener.invoke(it, course)
 
             }
             addView(tvItem)
@@ -353,11 +354,11 @@ class CourseView @JvmOverloads constructor(
         return index
     }
 
-    fun setOnCourseItemClickListener(onCourseItemClickListener: (course: CourseModel) -> Unit) {
+    fun setOnCourseItemClickListener(onCourseItemClickListener: (view: View, course: CourseModel) -> Unit) {
         this.onCourseItemClickListener = onCourseItemClickListener
     }
 
-    private lateinit var onCourseItemClickListener: (course: CourseModel) -> Unit
+    private lateinit var onCourseItemClickListener: (view: View, course: CourseModel) -> Unit
 
     companion object {
         private const val MAX_DAY = 7

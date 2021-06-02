@@ -4,6 +4,23 @@
             "outputFile": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-large-v4\\values-large-v4.xml",
             "map": [
                 {
+                    "source": "D:\\.gradle\\caches\\transforms-2\\files-2.1\\43361f502bf104b4b1c5f105cf5f43c7\\jetified-bottomsheets-3.3.0\\res\\values-large-v4\\values-large-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "45",
+                        "endOffsets": "96"
+                    },
+                    "to": {
+                        "startLines": "10",
+                        "startColumns": "4",
+                        "startOffsets": "588",
+                        "endColumns": "45",
+                        "endOffsets": "629"
+                    }
+                },
+                {
                     "source": "D:\\.gradle\\caches\\transforms-2\\files-2.1\\02ad5811efce37b0c0ff229d035ffc2d\\appcompat-1.3.0\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
@@ -11,6 +28,30 @@
                         "startOffsets": "55,114,185,256,326,396,464,532,636",
                         "endColumns": "58,70,70,69,69,67,67,103,115",
                         "endOffsets": "109,180,251,321,391,459,527,631,747"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,11,12",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,114,185,256,326,396,464,634,738",
+                        "endColumns": "58,70,70,69,69,67,67,103,115",
+                        "endOffsets": "109,180,251,321,391,459,527,733,849"
+                    }
+                },
+                {
+                    "source": "D:\\.gradle\\caches\\transforms-2\\files-2.1\\bf73f621de542f42daecad6ae94b20b6\\jetified-color-3.3.0\\res\\values-large-v4\\values-large-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "55",
+                        "endOffsets": "106"
+                    },
+                    "to": {
+                        "startLines": "9",
+                        "startColumns": "4",
+                        "startOffsets": "532",
+                        "endColumns": "55",
+                        "endOffsets": "583"
                     }
                 },
                 {
@@ -23,11 +64,11 @@
                         "endOffsets": "172,306"
                     },
                     "to": {
-                        "startLines": "11,12",
+                        "startLines": "13,14",
                         "startColumns": "4,4",
-                        "startOffsets": "752,874",
+                        "startOffsets": "854,976",
                         "endColumns": "121,133",
-                        "endOffsets": "869,1003"
+                        "endOffsets": "971,1105"
                     }
                 }
             ]

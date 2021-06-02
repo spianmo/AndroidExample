@@ -1,17 +1,29 @@
 package com.kirito666.room.base
 
 import android.R
+import android.app.Activity
 import android.content.Context
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.view.LayoutInflater
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.viewbinding.ViewBinding
+import java.lang.reflect.InvocationTargetException
+import java.lang.reflect.ParameterizedType
 
-
-open class BaseActivity : AppCompatActivity() {
+/**
+ * Copyright (c) 2021
+ *
+ * @Project:Freya
+ * @Author:Finger
+ * @FileName:BaseActivity.java
+ * @LastModified:2021-04-15T03:12:15.850+08:00
+ */
+open class BaseActivity<V : ViewBinding> : AppCompatActivity() {
     private val handler = Handler(Looper.getMainLooper())
 
     protected fun Any.toast(context: Context, duration: Int = Toast.LENGTH_SHORT): Toast {
@@ -24,11 +36,27 @@ open class BaseActivity : AppCompatActivity() {
         }
     }
 
+    protected lateinit var v: V
+    private var mContext: Activity? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             window.statusBarColor = resources.getColor(R.color.white)
             window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+        }
+        mContext = this
+        val type = javaClass.genericSuperclass as ParameterizedType
+        val cls = type.actualTypeArguments[0] as Class<*>
+        try {
+            val inflate = cls.getDeclaredMethod("inflate", LayoutInflater::class.java)
+            v = inflate.invoke(null, layoutInflater) as V
+            setContentView(v.root)
+        } catch (e: NoSuchMethodException) {
+            e.printStackTrace()
+        } catch (e: IllegalAccessException) {
+            e.printStackTrace()
+        } catch (e: InvocationTargetException) {
+            e.printStackTrace()
         }
     }
 }

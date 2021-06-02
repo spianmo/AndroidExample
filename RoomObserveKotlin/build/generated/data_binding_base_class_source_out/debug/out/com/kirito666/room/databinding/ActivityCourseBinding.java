@@ -22,13 +22,16 @@ public final class ActivityCourseBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final ImageView btnProfile;
+
+  @NonNull
   public final ImageView btnSetting;
 
   @NonNull
   public final CourseView courseview;
 
   @NonNull
-  public final ExtendedFloatingActionButton fab;
+  public final ExtendedFloatingActionButton fabAdd;
 
   @NonNull
   public final ConstraintLayout toolbar;
@@ -39,14 +42,15 @@ public final class ActivityCourseBinding implements ViewBinding {
   @NonNull
   public final TextView tvCurrentWeek;
 
-  private ActivityCourseBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView btnSetting,
-      @NonNull CourseView courseview, @NonNull ExtendedFloatingActionButton fab,
-      @NonNull ConstraintLayout toolbar, @NonNull TextView tvCurrentMouth,
-      @NonNull TextView tvCurrentWeek) {
+  private ActivityCourseBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView btnProfile,
+      @NonNull ImageView btnSetting, @NonNull CourseView courseview,
+      @NonNull ExtendedFloatingActionButton fabAdd, @NonNull ConstraintLayout toolbar,
+      @NonNull TextView tvCurrentMouth, @NonNull TextView tvCurrentWeek) {
     this.rootView = rootView;
+    this.btnProfile = btnProfile;
     this.btnSetting = btnSetting;
     this.courseview = courseview;
-    this.fab = fab;
+    this.fabAdd = fabAdd;
     this.toolbar = toolbar;
     this.tvCurrentMouth = tvCurrentMouth;
     this.tvCurrentWeek = tvCurrentWeek;
@@ -79,6 +83,12 @@ public final class ActivityCourseBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btn_profile;
+      ImageView btnProfile = rootView.findViewById(id);
+      if (btnProfile == null) {
+        break missingId;
+      }
+
       id = R.id.btn_setting;
       ImageView btnSetting = rootView.findViewById(id);
       if (btnSetting == null) {
@@ -91,9 +101,9 @@ public final class ActivityCourseBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.fab;
-      ExtendedFloatingActionButton fab = rootView.findViewById(id);
-      if (fab == null) {
+      id = R.id.fab_add;
+      ExtendedFloatingActionButton fabAdd = rootView.findViewById(id);
+      if (fabAdd == null) {
         break missingId;
       }
 
@@ -115,8 +125,8 @@ public final class ActivityCourseBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityCourseBinding((ConstraintLayout) rootView, btnSetting, courseview, fab,
-          toolbar, tvCurrentMouth, tvCurrentWeek);
+      return new ActivityCourseBinding((ConstraintLayout) rootView, btnProfile, btnSetting,
+          courseview, fabAdd, toolbar, tvCurrentMouth, tvCurrentWeek);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

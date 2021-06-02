@@ -10,7 +10,47 @@
         <item name="android:textColor">@android:color/darker_gray</item>
         <item name="android:windowContentTransitions">true</item>
         <item name="android:windowIsTranslucent">true</item>
-        <item name="android:navigationBarColor">#01ffffff</item>
+        <item name="md_corner_radius">25dp</item>
     </style>
 
+    <style name="textview_title_style">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="setting_item_ui">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:background">?selectableItemBackground</item>
+    </style>
+
+    <style name="optional_parameter_tv">
+        <item name="android:text">可选</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/primary_color_10r_rect</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">4dp</item>
+        <item name="android:paddingEnd">4dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingBottom">2dp</item>
+    </style>
+
+    <style name="DialogAnimations" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/slide_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/slide_bottom_out</item>
+    </style>
+
+    <style name="SliderStyle" parent="Widget.MaterialComponents.Slider">
+        <item name="trackHeight">24dp</item>
+        <item name="thumbRadius">8dp</item>
+        <item name="thumbColor">@android:color/white</item>
+        <item name="tickColorActive">@android:color/transparent</item>
+        <item name="tickColorInactive">@android:color/transparent</item>
+    </style>
 </resources>

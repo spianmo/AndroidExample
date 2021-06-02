@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="selectInt"
+            type="com.kirito666.room.component.SelectInt" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tvWeekNumberItem"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="@{String.valueOf(selectInt.number)}"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@{selectInt.select ? @android:color/white : @android:color/black}"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@{selectInt.select ? @drawable/button_background : null}" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
