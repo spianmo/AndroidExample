@@ -9,6 +9,8 @@ com/kirito666/room/dao/CourseDao_Impl.java
  com.kirito666.room.dao.CourseDao_Impl$1
  com.kirito666.room.dao.CourseDao_Impl$2
  com.kirito666.room.dao.CourseDao_Impl$3
+ com.kirito666.room.dao.CourseDao_Impl$4
+ com.kirito666.room.dao.CourseDao_Impl$5
 com/kirito666/room/databinding/ActivityMainBinding.java
  com.kirito666.room.databinding.ActivityMainBinding
 com/kirito666/room/DataBinderMapperImpl.java
@@ -43,6 +45,8 @@ com/kirito666/room/databinding/ViewSelectDayBinding.java
  com.kirito666.room.databinding.ViewSelectDayBinding
 com/kirito666/room/databinding/ViewSelectSessionBinding.java
  com.kirito666.room.databinding.ViewSelectSessionBinding
+com/kirito666/room/databinding/ActivityProfileBinding.java
+ com.kirito666.room.databinding.ActivityProfileBinding
 com/kirito666/room/databinding/ActivityCourseBinding.java
  com.kirito666.room.databinding.ActivityCourseBinding
 com/kirito666/room/databinding/ViewEditLayoutBinding.java

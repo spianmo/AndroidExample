@@ -2749,6 +2749,7 @@ layout abc_tooltip
 layout activity_add_course
 layout activity_course
 layout activity_main
+layout activity_profile
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

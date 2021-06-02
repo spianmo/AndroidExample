@@ -10,7 +10,7 @@ import com.kirito666.room.base.BaseActivity
 import com.kirito666.room.component.SelectWeeksDialog
 import com.kirito666.room.databinding.ActivityAddCourseBinding
 import com.kirito666.room.db.AppDatabase
-import com.kirito666.room.pojo.CourseModel
+import com.kirito666.room.model.CourseModel
 import com.kirito666.room.util.DateUtil
 import com.peanut.sdk.miuidialog.MIUIDialog
 import kotlinx.coroutines.*
@@ -196,7 +196,7 @@ class AddCourseActivity : BaseActivity<ActivityAddCourseBinding>() {
                 }
                 MIUIDialog(this).show {
                     message(text = "数据处理成功")
-                    positiveButton(text = "确定") { }
+                    positiveButton(text = "确定") { finish() }
                 }
             }
         }

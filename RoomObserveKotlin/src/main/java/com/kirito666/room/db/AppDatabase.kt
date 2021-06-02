@@ -5,7 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.kirito666.room.dao.CourseDao
-import com.kirito666.room.pojo.CourseModel
+import com.kirito666.room.model.CourseModel
 
 /**
  * @author Finger

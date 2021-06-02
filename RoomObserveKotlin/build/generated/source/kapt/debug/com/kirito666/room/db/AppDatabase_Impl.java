@@ -100,7 +100,7 @@ public final class AppDatabase_Impl extends AppDatabase {
         final TableInfo _infoCourseModel = new TableInfo("CourseModel", _columnsCourseModel, _foreignKeysCourseModel, _indicesCourseModel);
         final TableInfo _existingCourseModel = TableInfo.read(_db, "CourseModel");
         if (! _infoCourseModel.equals(_existingCourseModel)) {
-          return new RoomOpenHelper.ValidationResult(false, "CourseModel(com.kirito666.room.pojo.CourseModel).\n"
+          return new RoomOpenHelper.ValidationResult(false, "CourseModel(com.kirito666.room.model.CourseModel).\n"
                   + " Expected:\n" + _infoCourseModel + "\n"
                   + " Found:\n" + _existingCourseModel);
         }

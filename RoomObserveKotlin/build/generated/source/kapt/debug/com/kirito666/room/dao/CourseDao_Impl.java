@@ -9,9 +9,10 @@ import androidx.room.RoomSQLiteQuery;
 import androidx.room.util.CursorUtil;
 import androidx.room.util.DBUtil;
 import androidx.sqlite.db.SupportSQLiteStatement;
-import com.kirito666.room.pojo.CourseModel;
+import com.kirito666.room.model.CourseModel;
 import java.lang.Class;
 import java.lang.Exception;
+import java.lang.Integer;
 import java.lang.Long;
 import java.lang.Override;
 import java.lang.String;
@@ -26,6 +27,8 @@ public final class CourseDao_Impl implements CourseDao {
   private final RoomDatabase __db;
 
   private final EntityInsertionAdapter<CourseModel> __insertionAdapterOfCourseModel;
+
+  private final EntityDeletionOrUpdateAdapter<CourseModel> __deletionAdapterOfCourseModel;
 
   private final EntityDeletionOrUpdateAdapter<CourseModel> __updateAdapterOfCourseModel;
 
@@ -79,6 +82,21 @@ public final class CourseDao_Impl implements CourseDao {
           stmt.bindNull(13);
         } else {
           stmt.bindString(13, value.getTeacher());
+        }
+      }
+    };
+    this.__deletionAdapterOfCourseModel = new EntityDeletionOrUpdateAdapter<CourseModel>(__db) {
+      @Override
+      public String createQuery() {
+        return "DELETE FROM `CourseModel` WHERE `cid` = ?";
+      }
+
+      @Override
+      public void bind(SupportSQLiteStatement stmt, CourseModel value) {
+        if (value.getCid() == null) {
+          stmt.bindNull(1);
+        } else {
+          stmt.bindLong(1, value.getCid());
         }
       }
     };
@@ -153,6 +171,18 @@ public final class CourseDao_Impl implements CourseDao {
   }
 
   @Override
+  public void delete(final CourseModel course) {
+    __db.assertNotSuspendingTransaction();
+    __db.beginTransaction();
+    try {
+      __deletionAdapterOfCourseModel.handle(course);
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+    }
+  }
+
+  @Override
   public void update(final CourseModel course) {
     __db.assertNotSuspendingTransaction();
     __db.beginTransaction();
@@ -162,6 +192,40 @@ public final class CourseDao_Impl implements CourseDao {
     } finally {
       __db.endTransaction();
     }
+  }
+
+  @Override
+  public LiveData<Integer> getItemsCount() {
+    final String _sql = "SELECT COUNT(*) from CourseModel";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
+    return __db.getInvalidationTracker().createLiveData(new String[]{"CourseModel"}, false, new Callable<Integer>() {
+      @Override
+      public Integer call() throws Exception {
+        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+        try {
+          final Integer _result;
+          if(_cursor.moveToFirst()) {
+            final Integer _tmp;
+            if (_cursor.isNull(0)) {
+              _tmp = null;
+            } else {
+              _tmp = _cursor.getInt(0);
+            }
+            _result = _tmp;
+          } else {
+            _result = null;
+          }
+          return _result;
+        } finally {
+          _cursor.close();
+        }
+      }
+
+      @Override
+      protected void finalize() {
+        _statement.release();
+      }
+    });
   }
 
   @Override

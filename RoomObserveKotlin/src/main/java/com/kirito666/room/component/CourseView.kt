@@ -12,7 +12,7 @@ import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.TextView
 import com.kirito666.room.R
-import com.kirito666.room.pojo.CourseModel
+import com.kirito666.room.model.CourseModel
 import com.kirito666.room.util.DateUtil
 import java.util.*
 

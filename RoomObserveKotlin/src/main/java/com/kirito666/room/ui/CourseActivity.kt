@@ -12,20 +12,22 @@ import androidx.appcompat.widget.PopupMenu
 import com.kirito666.room.R
 import com.kirito666.room.base.BaseActivity
 import com.kirito666.room.databinding.ActivityCourseBinding
-import com.kirito666.room.pojo.CourseModel
+import com.kirito666.room.db.AppDatabase
+import com.kirito666.room.model.CourseModel
 import com.kirito666.room.util.DateUtil
+import kotlinx.coroutines.*
 
 class CourseActivity : BaseActivity<ActivityCourseBinding>() {
+    private val errorHandler = CoroutineExceptionHandler { _, throwable ->
+        ktxRunOnUi { throwable.toast(this) }
+    }
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         val currentWeek = 13
-
         v.tvCurrentMouth.text = DateUtil.getMonthInEng() + DateUtil.getDate("dd")
         v.tvCurrentWeek.text = currentWeek.toString() + "周"
-        v.courseview.loadCourses(getData())
         v.courseview.setCurrentWeek(currentWeek)
         v.courseview.showAbsent(true)
         v.courseview.setCourseItemMargin(6)
@@ -40,10 +42,29 @@ class CourseActivity : BaseActivity<ActivityCourseBinding>() {
             startActivity(Intent(this, AddCourseActivity().javaClass))
         }
 
+        v.btnProfile.setOnClickListener {
 
+        }
+        v.btnSetting.setOnClickListener {
+            loadTestData().forEach {
+                GlobalScope.launch(errorHandler) {
+                    withContext(Dispatchers.IO) {
+                        AppDatabase.getInstance(applicationContext).courseDao().insert(it)
+                    }
+                }
+            }
+        }
+        fetchCourseData()
     }
 
-    private fun getData(): List<CourseModel> {
+    private fun fetchCourseData() {
+        AppDatabase.getInstance(applicationContext).courseDao().allCourse.observe(
+            this, { courses ->
+                v.courseview.loadCourses(courses)
+            })
+    }
+
+    private fun loadTestData(): List<CourseModel> {
         val list: MutableList<CourseModel> = ArrayList()
         val course1 = CourseModel()
         course1.cname = "操作系统"
@@ -161,7 +182,12 @@ class CourseActivity : BaseActivity<ActivityCourseBinding>() {
                         AddCourseActivity().javaClass
                     ).putExtra("course", course)
                 )
-                R.id.it_deleteCourse -> null
+                R.id.it_deleteCourse ->
+                    GlobalScope.launch(errorHandler) {
+                        withContext(Dispatchers.IO) {
+                            AppDatabase.getInstance(applicationContext).courseDao().delete(course)
+                        }
+                    }
             }
             true
         }

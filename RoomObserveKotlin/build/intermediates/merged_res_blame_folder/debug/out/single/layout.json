@@ -12,6 +12,10 @@
         "source": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\src\\main\\res\\layout\\view_select_weeks.xml"
     },
     {
+        "merged": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_profile.xml",
+        "source": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\src\\main\\res\\layout\\activity_profile.xml"
+    },
+    {
         "merged": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\view_edit_layout.xml",
         "source": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\src\\main\\res\\layout\\view_edit_layout.xml"
     },
