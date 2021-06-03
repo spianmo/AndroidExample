@@ -26,6 +26,8 @@ com/kirito666/room/databinding/ViewSelectDayBinding.java
  com.kirito666.room.databinding.ViewSelectDayBinding
 com/kirito666/room/databinding/ActivityCourseBinding.java
  com.kirito666.room.databinding.ActivityCourseBinding
+com/kirito666/room/databinding/ViewSelectSliderBinding.java
+ com.kirito666.room.databinding.ViewSelectSliderBinding
 com/kirito666/room/databinding/ViewEditLayoutBinding.java
  com.kirito666.room.databinding.ViewEditLayoutBinding
 com/kirito666/room/databinding/ItemWeekNumberItemBinding.java
@@ -34,8 +36,6 @@ com/kirito666/room/databinding/ItemWeekNumberItemBindingImpl.java
  com.kirito666.room.databinding.ItemWeekNumberItemBindingImpl
 com/kirito666/room/databinding/ActivityMainBinding.java
  com.kirito666.room.databinding.ActivityMainBinding
-com/kirito666/room/DataBindingTriggerClass.java
- com.kirito666.room.DataBindingTriggerClass
 com/kirito666/room/BuildConfig.java
  com.kirito666.room.BuildConfig
 com/kirito666/room/databinding/ActivitySettingBinding.java
@@ -57,5 +57,5 @@ com/kirito666/room/databinding/ActivityProfileBinding.java
  com.kirito666.room.databinding.ActivityProfileBinding
 androidx/databinding/DataBindingComponent.java
  androidx.databinding.DataBindingComponent
-com/kirito666/room/databinding/ViewSelectItemHeightBinding.java
- com.kirito666.room.databinding.ViewSelectItemHeightBinding
+com/kirito666/room/DataBindingTriggerClass.java
+ com.kirito666.room.DataBindingTriggerClass

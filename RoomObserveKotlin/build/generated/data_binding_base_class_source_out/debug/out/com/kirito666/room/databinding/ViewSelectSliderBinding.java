@@ -15,7 +15,7 @@ import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
-public final class ViewSelectItemHeightBinding implements ViewBinding {
+public final class ViewSelectSliderBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
 
@@ -25,8 +25,8 @@ public final class ViewSelectItemHeightBinding implements ViewBinding {
   @NonNull
   public final Slider slider;
 
-  private ViewSelectItemHeightBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView dialogTitle, @NonNull Slider slider) {
+  private ViewSelectSliderBinding(@NonNull ConstraintLayout rootView, @NonNull TextView dialogTitle,
+      @NonNull Slider slider) {
     this.rootView = rootView;
     this.dialogTitle = dialogTitle;
     this.slider = slider;
@@ -39,14 +39,14 @@ public final class ViewSelectItemHeightBinding implements ViewBinding {
   }
 
   @NonNull
-  public static ViewSelectItemHeightBinding inflate(@NonNull LayoutInflater inflater) {
+  public static ViewSelectSliderBinding inflate(@NonNull LayoutInflater inflater) {
     return inflate(inflater, null, false);
   }
 
   @NonNull
-  public static ViewSelectItemHeightBinding inflate(@NonNull LayoutInflater inflater,
+  public static ViewSelectSliderBinding inflate(@NonNull LayoutInflater inflater,
       @Nullable ViewGroup parent, boolean attachToParent) {
-    View root = inflater.inflate(R.layout.view_select_item_height, parent, false);
+    View root = inflater.inflate(R.layout.view_select_slider, parent, false);
     if (attachToParent) {
       parent.addView(root);
     }
@@ -54,7 +54,7 @@ public final class ViewSelectItemHeightBinding implements ViewBinding {
   }
 
   @NonNull
-  public static ViewSelectItemHeightBinding bind(@NonNull View rootView) {
+  public static ViewSelectSliderBinding bind(@NonNull View rootView) {
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
@@ -71,7 +71,7 @@ public final class ViewSelectItemHeightBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ViewSelectItemHeightBinding((ConstraintLayout) rootView, dialogTitle, slider);
+      return new ViewSelectSliderBinding((ConstraintLayout) rootView, dialogTitle, slider);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

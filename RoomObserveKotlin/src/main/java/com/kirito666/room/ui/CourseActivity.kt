@@ -15,12 +15,16 @@ import com.kirito666.room.databinding.ActivityCourseBinding
 import com.kirito666.room.db.AppDatabase
 import com.kirito666.room.model.CourseModel
 import com.kirito666.room.util.DateUtil
+import com.kirito666.room.util.SharedPreferenceBooleanLiveData
+import com.kirito666.room.util.SharedPreferenceIntLiveData
 import kotlinx.coroutines.*
 
 class CourseActivity : BaseActivity<ActivityCourseBinding>() {
     private val errorHandler = CoroutineExceptionHandler { _, throwable ->
         ktxRunOnUi { throwable.toast(this) }
     }
+    private val settingPreference = "Settings"
+
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,9 +33,7 @@ class CourseActivity : BaseActivity<ActivityCourseBinding>() {
         v.tvCurrentMouth.text = DateUtil.getMonthInEng() + DateUtil.getDate("dd")
         v.tvCurrentWeek.text = currentWeek.toString() + "周"
         v.courseview.setCurrentWeek(currentWeek)
-        v.courseview.showAbsent(true)
-        v.courseview.setCourseItemMargin(6)
-        v.courseview.showDivider(false)
+
         v.courseview.setOnCourseItemClickListener { view, course ->
             run {
                 showMenu(view, course)
@@ -43,9 +45,6 @@ class CourseActivity : BaseActivity<ActivityCourseBinding>() {
         }
 
         v.btnProfile.setOnClickListener {
-
-        }
-        v.btnSetting.setOnClickListener {
             loadTestData().forEach {
                 GlobalScope.launch(errorHandler) {
                     withContext(Dispatchers.IO) {
@@ -54,10 +53,14 @@ class CourseActivity : BaseActivity<ActivityCourseBinding>() {
                 }
             }
         }
-        fetchCourseData()
+        v.btnSetting.setOnClickListener {
+            startActivity(Intent(this, SettingActivity::class.java))
+        }
+        observeCourseData()
+        observeDataChanged()
     }
 
-    private fun fetchCourseData() {
+    private fun observeCourseData() {
         AppDatabase.getInstance(applicationContext).courseDao().allCourse.observe(
             this, { courses ->
                 v.courseview.loadCourses(courses)
@@ -167,6 +170,43 @@ class CourseActivity : BaseActivity<ActivityCourseBinding>() {
         course10.endWeek = 15
         list.add(course10)
         return list
+    }
+
+    @SuppressLint("SetTextI18n")
+    fun observeDataChanged() {
+        SharedPreferenceBooleanLiveData(
+            getSharedPreferences(settingPreference, MODE_PRIVATE),
+            "isShowSlider",
+            false
+        )
+            .observe(this) { isShowSlider ->
+                v.courseview.showDivider(isShowSlider)
+            }
+
+        SharedPreferenceBooleanLiveData(
+            getSharedPreferences(settingPreference, MODE_PRIVATE),
+            "isNotCurWeek",
+            true
+        )
+            .observe(this) { isNotCurWeek ->
+                v.courseview.showAbsent(isNotCurWeek)
+            }
+        SharedPreferenceIntLiveData(
+            getSharedPreferences(settingPreference, MODE_PRIVATE),
+            "ItemHeight",
+            68
+        )
+            .observe(this) { itemHeight ->
+                v.courseview.setCourseItemHeight(itemHeight)
+            }
+        SharedPreferenceIntLiveData(
+            getSharedPreferences(settingPreference, MODE_PRIVATE),
+            "ItemMargin",
+            6
+        )
+            .observe(this) { itemMargin ->
+                v.courseview.setCourseItemMargin(itemMargin)
+            }
     }
 
     @SuppressLint("RestrictedApi")

@@ -2907,8 +2907,8 @@ layout text_view_with_theme_line_height
 layout text_view_without_line_height
 layout view_edit_layout
 layout view_select_day
-layout view_select_item_height
 layout view_select_session
+layout view_select_slider
 layout view_select_weeks
 menu pop
 menu popup_menu

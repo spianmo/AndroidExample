@@ -2906,8 +2906,8 @@ int layout text_view_with_theme_line_height 0x7f0b0094
 int layout text_view_without_line_height 0x7f0b0095
 int layout view_edit_layout 0x7f0b0096
 int layout view_select_day 0x7f0b0097
-int layout view_select_item_height 0x7f0b0098
 int layout view_select_session 0x7f0b0099
+int layout view_select_slider 0x7f0b009b
 int layout view_select_weeks 0x7f0b009a
 int menu pop 0x7f0c0000
 int menu popup_menu 0x7f0c0001

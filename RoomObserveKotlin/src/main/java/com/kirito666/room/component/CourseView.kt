@@ -30,9 +30,9 @@ class CourseView @JvmOverloads constructor(
     private var mCaldender: Calendar = Calendar.getInstance(TimeZone.getTimeZone("GMT+8:00"))
     private val mList: MutableList<CourseModel>
     private val screenWidth: Int
-    private val screenHeight: Int
+    private var screenHeight: Int
     private val gridItemWidth: Int
-    private val gridItemHeight: Int
+    private var gridItemHeight: Int
     private val titleHeight: Int
     private val sectionWidth: Int
     private val mDividerPaint: Paint
@@ -41,7 +41,7 @@ class CourseView @JvmOverloads constructor(
     private val courseColors = arrayOfNulls<String>(30)
     private var CourseColorArrIndex = 0
     private var currentWeek: Int
-    private var showAbsentCourse: Boolean = false
+    private var showAbsentCourse: Boolean = true
     private var itemMargin: Int = 1
     private var showDivider: Boolean = false
 
@@ -129,6 +129,14 @@ class CourseView @JvmOverloads constructor(
 
     fun setCourseItemMargin(itemMargin: Int) {
         this.itemMargin = itemMargin
+        removeAllViews()
+        drawViews(mList)
+        invalidate()
+    }
+
+    fun setCourseItemHeight(itemHeight: Int) {
+        this.gridItemHeight = dp2px(itemHeight.toFloat())
+        this.screenHeight = gridItemHeight * 12 + 100
         removeAllViews()
         drawViews(mList)
         invalidate()
