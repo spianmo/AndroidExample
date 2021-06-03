@@ -20,6 +20,10 @@
         "source": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\src\\main\\res\\layout\\view_edit_layout.xml"
     },
     {
+        "merged": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\view_select_item_height.xml",
+        "source": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\src\\main\\res\\layout\\view_select_item_height.xml"
+    },
+    {
         "merged": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
         "source": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\src\\main\\res\\layout\\activity_main.xml"
     },
@@ -34,5 +38,9 @@
     {
         "merged": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_course.xml",
         "source": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\src\\main\\res\\layout\\activity_course.xml"
+    },
+    {
+        "merged": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_setting.xml",
+        "source": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\src\\main\\res\\layout\\activity_setting.xml"
     }
 ]

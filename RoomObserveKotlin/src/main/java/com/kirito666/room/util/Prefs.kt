@@ -5,15 +5,14 @@ import android.content.SharedPreferences
 import com.kirito666.room.App
 
 /**
- * Intro：
  * Prefs
- * @author sunliwei
+ * @author Finegr
  * @date 2020/6/24 11:58
  */
 
 object Prefs {
-    val sharedPreferences: SharedPreferences =
-        App.context.getSharedPreferences("data", Context.MODE_PRIVATE)
+    private val sharedPreferences: SharedPreferences =
+        App.context.getSharedPreferences("Settings", Context.MODE_PRIVATE)
 
     /**
      * 保存

@@ -1,7 +1,3 @@
-com/kirito666/room/databinding/ItemWeekNumberItemBinding.java
- com.kirito666.room.databinding.ItemWeekNumberItemBinding
-com/kirito666/room/databinding/ItemWeekNumberItemBindingImpl.java
- com.kirito666.room.databinding.ItemWeekNumberItemBindingImpl
 com/kirito666/room/base/ViewHolder.java
  com.kirito666.room.base.ViewHolder
 com/kirito666/room/dao/CourseDao_Impl.java
@@ -11,47 +7,55 @@ com/kirito666/room/dao/CourseDao_Impl.java
  com.kirito666.room.dao.CourseDao_Impl$3
  com.kirito666.room.dao.CourseDao_Impl$4
  com.kirito666.room.dao.CourseDao_Impl$5
-com/kirito666/room/databinding/ActivityMainBinding.java
- com.kirito666.room.databinding.ActivityMainBinding
 com/kirito666/room/DataBinderMapperImpl.java
  com.kirito666.room.DataBinderMapperImpl
  com.kirito666.room.DataBinderMapperImpl$InnerBrLookup
  com.kirito666.room.DataBinderMapperImpl$InnerLayoutIdLookup
-com/kirito666/room/BuildConfig.java
- com.kirito666.room.BuildConfig
 androidx/databinding/DataBinderMapperImpl.java
  androidx.databinding.DataBinderMapperImpl
 androidx/databinding/library/baseAdapters/BR.java
  androidx.databinding.library.baseAdapters.BR
-com/kirito666/room/util/Bindings.java
- com.kirito666.room.util.Bindings
-com/kirito666/room/db/AppDatabase_Impl.java
- com.kirito666.room.db.AppDatabase_Impl
- com.kirito666.room.db.AppDatabase_Impl$1
 com/kirito666/room/base/BaseAdapter.java
  com.kirito666.room.base.BaseAdapter
  com.kirito666.room.base.BaseAdapter$OnItemClickListener
  com.kirito666.room.base.BaseAdapter$OnItemElementClickListener
  com.kirito666.room.base.BaseAdapter$OnMyItemLongClickListener
-com/kirito666/room/util/DateUtil.java
- com.kirito666.room.util.DateUtil
-com/kirito666/room/databinding/ViewSelectWeeksBinding.java
- com.kirito666.room.databinding.ViewSelectWeeksBinding
 com/kirito666/room/databinding/ActivityAddCourseBinding.java
  com.kirito666.room.databinding.ActivityAddCourseBinding
-com/kirito666/room/BR.java
- com.kirito666.room.BR
 com/kirito666/room/databinding/ViewSelectDayBinding.java
  com.kirito666.room.databinding.ViewSelectDayBinding
-com/kirito666/room/databinding/ViewSelectSessionBinding.java
- com.kirito666.room.databinding.ViewSelectSessionBinding
-com/kirito666/room/databinding/ActivityProfileBinding.java
- com.kirito666.room.databinding.ActivityProfileBinding
 com/kirito666/room/databinding/ActivityCourseBinding.java
  com.kirito666.room.databinding.ActivityCourseBinding
 com/kirito666/room/databinding/ViewEditLayoutBinding.java
  com.kirito666.room.databinding.ViewEditLayoutBinding
-androidx/databinding/DataBindingComponent.java
- androidx.databinding.DataBindingComponent
+com/kirito666/room/databinding/ItemWeekNumberItemBinding.java
+ com.kirito666.room.databinding.ItemWeekNumberItemBinding
+com/kirito666/room/databinding/ItemWeekNumberItemBindingImpl.java
+ com.kirito666.room.databinding.ItemWeekNumberItemBindingImpl
+com/kirito666/room/databinding/ActivityMainBinding.java
+ com.kirito666.room.databinding.ActivityMainBinding
 com/kirito666/room/DataBindingTriggerClass.java
  com.kirito666.room.DataBindingTriggerClass
+com/kirito666/room/BuildConfig.java
+ com.kirito666.room.BuildConfig
+com/kirito666/room/databinding/ActivitySettingBinding.java
+ com.kirito666.room.databinding.ActivitySettingBinding
+com/kirito666/room/util/Bindings.java
+ com.kirito666.room.util.Bindings
+com/kirito666/room/db/AppDatabase_Impl.java
+ com.kirito666.room.db.AppDatabase_Impl
+ com.kirito666.room.db.AppDatabase_Impl$1
+com/kirito666/room/util/DateUtil.java
+ com.kirito666.room.util.DateUtil
+com/kirito666/room/databinding/ViewSelectWeeksBinding.java
+ com.kirito666.room.databinding.ViewSelectWeeksBinding
+com/kirito666/room/BR.java
+ com.kirito666.room.BR
+com/kirito666/room/databinding/ViewSelectSessionBinding.java
+ com.kirito666.room.databinding.ViewSelectSessionBinding
+com/kirito666/room/databinding/ActivityProfileBinding.java
+ com.kirito666.room.databinding.ActivityProfileBinding
+androidx/databinding/DataBindingComponent.java
+ androidx.databinding.DataBindingComponent
+com/kirito666/room/databinding/ViewSelectItemHeightBinding.java
+ com.kirito666.room.databinding.ViewSelectItemHeightBinding

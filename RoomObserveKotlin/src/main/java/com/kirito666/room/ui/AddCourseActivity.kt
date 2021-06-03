@@ -39,7 +39,7 @@ class AddCourseActivity : BaseActivity<ActivityAddCourseBinding>() {
         }
 
         if (mCourse.teacher != null) {
-            v.coursePositionSubtitle.text = mCourse.teacher
+            v.courseTeacherSubtitle.text = mCourse.teacher
         }
 
         if (mCourse.classroom != null) {
@@ -70,9 +70,7 @@ class AddCourseActivity : BaseActivity<ActivityAddCourseBinding>() {
                 negativeButton(text = "取消")
             }
         }
-        if (mCourse.teacher?.isNotEmpty() == true) {
-            v.courseNameSubTitle.text = mCourse.teacher
-        }
+
         v.editCourseTeacher.setOnClickListener {
             MIUIDialog(this).show {
                 title(text = "编辑课程教师")
