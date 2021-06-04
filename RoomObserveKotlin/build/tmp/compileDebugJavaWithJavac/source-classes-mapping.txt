@@ -49,12 +49,16 @@ com/kirito666/room/util/DateUtil.java
  com.kirito666.room.util.DateUtil
 com/kirito666/room/databinding/ViewSelectWeeksBinding.java
  com.kirito666.room.databinding.ViewSelectWeeksBinding
+com/kirito666/room/original/DbHelper.java
+ com.kirito666.room.original.DbHelper
 com/kirito666/room/BR.java
  com.kirito666.room.BR
 com/kirito666/room/databinding/ViewSelectSessionBinding.java
  com.kirito666.room.databinding.ViewSelectSessionBinding
 com/kirito666/room/databinding/ActivityProfileBinding.java
  com.kirito666.room.databinding.ActivityProfileBinding
+com/kirito666/room/original/CourseDao.java
+ com.kirito666.room.original.CourseDao
 androidx/databinding/DataBindingComponent.java
  androidx.databinding.DataBindingComponent
 com/kirito666/room/DataBindingTriggerClass.java

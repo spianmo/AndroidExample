@@ -2020,10 +2020,15 @@ drawable design_snackbar_background
 drawable glance_library_arrow_right
 drawable ic_baseline_access_time_24
 drawable ic_baseline_account_circle_24
+drawable ic_baseline_alternate_email_24
+drawable ic_baseline_class_24
 drawable ic_baseline_delete_24
 drawable ic_baseline_eco_24
 drawable ic_baseline_edit_calendar_24
 drawable ic_baseline_format_indent_decrease_24
+drawable ic_baseline_near_me_24
+drawable ic_baseline_phone_iphone_24
+drawable ic_baseline_share_24
 drawable ic_baseline_wysiwyg_24
 drawable ic_check_black_24dp
 drawable ic_clock_black_24dp
@@ -2095,6 +2100,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable primary_color_10r_rect
+drawable profile_background
 drawable ripple_radius
 drawable select_course_item_blue
 drawable select_course_item_cyan
@@ -2203,6 +2209,7 @@ id alpha_value
 id always
 id animateToEnd
 id animateToStart
+id appbar
 id argbView
 id asConfigured
 id async
@@ -2524,6 +2531,14 @@ id position
 id positive
 id postLayout
 id preview_frame
+id profileClassSubtitle
+id profileEmailSubtitle
+id profileTelephoneSubtitle
+id profileUniversitySubtitle
+id profile_class
+id profile_email
+id profile_telephone
+id profile_university
 id progressBar
 id progress_bar
 id progress_circular
@@ -2567,6 +2582,7 @@ id scheduleIsNotCurWeekSubTitle
 id scheduleIsNotCurWeekTitle
 id scheduleMaxSessionIcon
 id schedulePaletteItem
+id scheduleUseRoomItem
 id screen
 id scroll
 id scrollIndicatorDown
@@ -2628,6 +2644,7 @@ id submit_area
 id subtitle
 id switchIsNotCurWeek
 id switchIsShowSlider
+id switchUseRoom
 id switchs
 id tabMode
 id tableNameText
@@ -2680,6 +2697,7 @@ id titleText
 id title_template
 id toggle
 id toolbar
+id toolbar_layout
 id top
 id topPanel
 id touch_outside
@@ -2701,6 +2719,8 @@ id unlabeled
 id up
 id upper
 id useLogo
+id useRoom
+id useRoomSubTitle
 id versionSlogan
 id vertical
 id view_offset_helper
@@ -2912,6 +2932,7 @@ layout view_select_slider
 layout view_select_weeks
 menu pop
 menu popup_menu
+mipmap background
 mipmap glance_library_ic_launcher
 mipmap glance_library_ic_launcher_foreground
 mipmap glance_library_ic_launcher_round

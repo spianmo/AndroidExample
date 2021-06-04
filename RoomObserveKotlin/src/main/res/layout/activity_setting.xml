@@ -83,6 +83,47 @@
             android:visibility="visible">
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/scheduleUseRoomItem"
+                style="@style/setting_item_ui">
+
+                <TextView
+                    android:id="@+id/useRoom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="是否使用Room框架"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/useRoomSubTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="当前使用Room框架进行CRUD"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/useRoom"
+                    app:layout_constraintTop_toBottomOf="@+id/useRoom" />
+
+                <Switch
+                    android:id="@+id/switchUseRoom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:clickable="false"
+                    android:checked="true"
+                    app:layout_constraintBottom_toBottomOf="@+id/useRoomSubTitle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/useRoom" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/schedulePaletteItem"
                 style="@style/setting_item_ui">
 
@@ -163,7 +204,6 @@
                     tools:ignore="UseSwitchCompatOrMaterialXml" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/scheduleCourseItemHeightItem"
@@ -277,7 +317,6 @@
                     app:layout_constraintTop_toBottomOf="@+id/change_course_card_ui_title" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-
 
         </LinearLayout>
     </ScrollView>

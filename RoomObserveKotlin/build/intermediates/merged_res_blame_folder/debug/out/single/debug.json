@@ -20,24 +20,28 @@
         "source": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\src\\main\\res\\anim\\page_out.xml"
     },
     {
+        "merged": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\build\\intermediates\\res\\merged\\debug\\menu_pop.xml.flat",
+        "source": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\src\\main\\res\\menu\\pop.xml"
+    },
+    {
         "merged": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\build\\intermediates\\res\\merged\\debug\\drawable_select_course_item_red.xml.flat",
         "source": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\src\\main\\res\\drawable\\select_course_item_red.xml"
     },
     {
-        "merged": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\build\\intermediates\\res\\merged\\debug\\menu_pop.xml.flat",
-        "source": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\src\\main\\res\\menu\\pop.xml"
+        "merged": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_background.jpg.flat",
+        "source": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\src\\main\\res\\mipmap-xxxhdpi\\background.jpg"
     },
     {
         "merged": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_foreground.png.flat",
-        "source": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_foreground.png"
-    },
-    {
         "merged": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\build\\intermediates\\res\\merged\\debug\\layout_view_select_weeks.xml.flat",
         "source": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\src\\main\\res\\layout\\view_select_weeks.xml"
+    },
+    {
+        "merged": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_foreground.png"
     },
     {
         "merged": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\build\\intermediates\\res\\merged\\debug\\layout_activity_course.xml.flat",
@@ -48,16 +52,16 @@
         "source": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_format_indent_decrease_24.xml.flat",
-        "source": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\src\\main\\res\\drawable\\ic_baseline_format_indent_decrease_24.xml"
-    },
-    {
         "merged": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
         "merged": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\build\\intermediates\\res\\merged\\debug\\drawable_course_position_24dp.xml.flat",
         "source": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\src\\main\\res\\drawable\\course_position_24dp.xml"
+    },
+    {
+        "merged": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_format_indent_decrease_24.xml.flat",
+        "source": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\src\\main\\res\\drawable\\ic_baseline_format_indent_decrease_24.xml"
     },
     {
         "merged": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_edit_calendar_24.xml.flat",
@@ -96,6 +100,10 @@
         "source": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\src\\main\\res\\layout\\view_edit_layout.xml"
     },
     {
+        "merged": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_share_24.xml.flat",
+        "source": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\src\\main\\res\\drawable\\ic_baseline_share_24.xml"
+    },
+    {
         "merged": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\build\\intermediates\\res\\merged\\debug\\layout_view_select_day.xml.flat",
         "source": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\src\\main\\res\\layout\\view_select_day.xml"
     },
@@ -106,6 +114,10 @@
     {
         "merged": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\build\\intermediates\\res\\merged\\debug\\drawable_select_course_item_orange.xml.flat",
         "source": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\src\\main\\res\\drawable\\select_course_item_orange.xml"
+    },
+    {
+        "merged": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_near_me_24.xml.flat",
+        "source": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\src\\main\\res\\drawable\\ic_baseline_near_me_24.xml"
     },
     {
         "merged": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
@@ -132,6 +144,10 @@
         "source": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\src\\main\\res\\drawable\\select_course_item_cyan.xml"
     },
     {
+        "merged": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_class_24.xml.flat",
+        "source": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\src\\main\\res\\drawable\\ic_baseline_class_24.xml"
+    },
+    {
         "merged": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_access_time_24.xml.flat",
         "source": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\src\\main\\res\\drawable\\ic_baseline_access_time_24.xml"
     },
@@ -146,6 +162,10 @@
     {
         "merged": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\build\\intermediates\\res\\merged\\debug\\drawable_select_course_item_light_blue.xml.flat",
         "source": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\src\\main\\res\\drawable\\select_course_item_light_blue.xml"
+    },
+    {
+        "merged": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_phone_iphone_24.xml.flat",
+        "source": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\src\\main\\res\\drawable\\ic_baseline_phone_iphone_24.xml"
     },
     {
         "merged": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
@@ -164,6 +184,10 @@
         "source": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\src\\main\\res\\drawable\\ic_svg_add.xml"
     },
     {
+        "merged": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_alternate_email_24.xml.flat",
+        "source": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\src\\main\\res\\drawable\\ic_baseline_alternate_email_24.xml"
+    },
+    {
         "merged": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\build\\intermediates\\res\\merged\\debug\\drawable_select_course_item_grey.xml.flat",
         "source": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\src\\main\\res\\drawable\\select_course_item_grey.xml"
     },
@@ -174,6 +198,10 @@
     {
         "merged": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\build\\intermediates\\res\\merged\\debug\\drawable_select_course_item_teal.xml.flat",
         "source": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\src\\main\\res\\drawable\\select_course_item_teal.xml"
+    },
+    {
+        "merged": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\build\\intermediates\\res\\merged\\debug\\drawable_profile_background.xml.flat",
+        "source": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\src\\main\\res\\drawable\\profile_background.xml"
     },
     {
         "merged": "D:\\JetBrainProjects\\AndroidExample\\RoomObserveKotlin\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",

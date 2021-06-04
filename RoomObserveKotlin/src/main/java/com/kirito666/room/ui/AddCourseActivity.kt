@@ -5,13 +5,16 @@ import android.os.Bundle
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
 import com.google.android.material.slider.RangeSlider
+import com.kirito666.room.App
 import com.kirito666.room.R
 import com.kirito666.room.base.BaseActivity
 import com.kirito666.room.component.SelectWeeksDialog
 import com.kirito666.room.databinding.ActivityAddCourseBinding
 import com.kirito666.room.db.AppDatabase
 import com.kirito666.room.model.CourseModel
+import com.kirito666.room.original.CourseDao
 import com.kirito666.room.util.DateUtil
+import com.kirito666.room.util.Prefs
 import com.peanut.sdk.miuidialog.MIUIDialog
 import kotlinx.coroutines.*
 
@@ -22,6 +25,7 @@ class AddCourseActivity : BaseActivity<ActivityAddCourseBinding>() {
     }
     var mCourse: CourseModel = CourseModel()
     private var hasCourseData = false
+    private val mCourseDao = CourseDao(App.context)
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -74,7 +78,10 @@ class AddCourseActivity : BaseActivity<ActivityAddCourseBinding>() {
         v.editCourseTeacher.setOnClickListener {
             MIUIDialog(this).show {
                 title(text = "编辑课程教师")
-                input(hint = "请输入课程教师") { it, _ ->
+                input(
+                    prefill = if (mCourse.teacher != null) mCourse.teacher
+                    else null, hint = "请输入课程教师"
+                ) { it, _ ->
                     mCourse.teacher = it.toString()
                     v.courseTeacherSubtitle.text = it
                 }
@@ -180,21 +187,31 @@ class AddCourseActivity : BaseActivity<ActivityAddCourseBinding>() {
             } else {
                 GlobalScope.launch(errorHandler) {
                     withContext(Dispatchers.IO) {
-                        if (hasCourseData) {
-                            AppDatabase.getInstance(applicationContext)
-                                .courseDao()
-                                .update(mCourse)
+                        if (Prefs.getBoolean("useRoom", true)) {
+                            if (hasCourseData) {
+                                AppDatabase.getInstance(applicationContext)
+                                    .courseDao()
+                                    .update(mCourse)
+                            } else {
+                                AppDatabase.getInstance(applicationContext)
+                                    .courseDao()
+                                    .insert(mCourse)
+                            }
                         } else {
-                            AppDatabase.getInstance(applicationContext)
-                                .courseDao()
-                                .insert(mCourse)
+                            if (hasCourseData) mCourseDao.update(mCourse) else mCourseDao.insert(
+                                mCourse
+                            )
                         }
-
                     }
                 }
-                MIUIDialog(this).show {
-                    message(text = "数据处理成功")
-                    positiveButton(text = "确定") { finish() }
+                try {
+                    MIUIDialog(this).show {
+                        message(text = "数据处理成功")
+                        positiveButton(text = "确定") {
+                            finish()
+                        }
+                    }
+                } catch (ignored: Exception) {
                 }
             }
         }

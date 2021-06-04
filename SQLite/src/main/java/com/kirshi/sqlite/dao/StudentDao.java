@@ -1,4 +1,4 @@
-package com.kirshi.sqlite.Dao;
+package com.kirshi.sqlite.dao;
 
 import android.content.ContentValues;
 import android.content.Context;

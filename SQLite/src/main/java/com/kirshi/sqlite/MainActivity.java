@@ -6,9 +6,9 @@ import androidx.fragment.app.DialogFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.kirshi.framework.base.BaseActivity;
-import com.kirshi.sqlite.Dao.StudentDao;
 import com.kirshi.sqlite.adapter.StudentAdapter;
 import com.kirshi.sqlite.bean.Student;
+import com.kirshi.sqlite.dao.StudentDao;
 import com.kirshi.sqlite.databinding.ActivityMainBinding;
 import com.kirshi.sqlite.fragment.InsertDialog;
 

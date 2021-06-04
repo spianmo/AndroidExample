@@ -82,6 +82,9 @@ public final class ActivitySettingBinding implements ViewBinding {
   public final ConstraintLayout schedulePaletteItem;
 
   @NonNull
+  public final ConstraintLayout scheduleUseRoomItem;
+
+  @NonNull
   public final TextView showSliderSubTitle;
 
   @NonNull
@@ -91,7 +94,16 @@ public final class ActivitySettingBinding implements ViewBinding {
   public final Switch switchIsShowSlider;
 
   @NonNull
+  public final Switch switchUseRoom;
+
+  @NonNull
   public final TextView textView17;
+
+  @NonNull
+  public final TextView useRoom;
+
+  @NonNull
+  public final TextView useRoomSubTitle;
 
   @NonNull
   public final TextView versionSlogan;
@@ -110,9 +122,10 @@ public final class ActivitySettingBinding implements ViewBinding {
       @NonNull ConstraintLayout scheduleIsNotCurWeek,
       @NonNull TextView scheduleIsNotCurWeekSubTitle, @NonNull TextView scheduleIsNotCurWeekTitle,
       @NonNull ImageView scheduleMaxSessionIcon, @NonNull ConstraintLayout schedulePaletteItem,
-      @NonNull TextView showSliderSubTitle, @NonNull Switch switchIsNotCurWeek,
-      @NonNull Switch switchIsShowSlider, @NonNull TextView textView17,
-      @NonNull TextView versionSlogan) {
+      @NonNull ConstraintLayout scheduleUseRoomItem, @NonNull TextView showSliderSubTitle,
+      @NonNull Switch switchIsNotCurWeek, @NonNull Switch switchIsShowSlider,
+      @NonNull Switch switchUseRoom, @NonNull TextView textView17, @NonNull TextView useRoom,
+      @NonNull TextView useRoomSubTitle, @NonNull TextView versionSlogan) {
     this.rootView = rootView;
     this.changeCourseCardUi = changeCourseCardUi;
     this.changeCourseCardUiSubtitle = changeCourseCardUiSubtitle;
@@ -134,10 +147,14 @@ public final class ActivitySettingBinding implements ViewBinding {
     this.scheduleIsNotCurWeekTitle = scheduleIsNotCurWeekTitle;
     this.scheduleMaxSessionIcon = scheduleMaxSessionIcon;
     this.schedulePaletteItem = schedulePaletteItem;
+    this.scheduleUseRoomItem = scheduleUseRoomItem;
     this.showSliderSubTitle = showSliderSubTitle;
     this.switchIsNotCurWeek = switchIsNotCurWeek;
     this.switchIsShowSlider = switchIsShowSlider;
+    this.switchUseRoom = switchUseRoom;
     this.textView17 = textView17;
+    this.useRoom = useRoom;
+    this.useRoomSubTitle = useRoomSubTitle;
     this.versionSlogan = versionSlogan;
   }
 
@@ -288,6 +305,12 @@ public final class ActivitySettingBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.scheduleUseRoomItem;
+      ConstraintLayout scheduleUseRoomItem = rootView.findViewById(id);
+      if (scheduleUseRoomItem == null) {
+        break missingId;
+      }
+
       id = R.id.showSliderSubTitle;
       TextView showSliderSubTitle = rootView.findViewById(id);
       if (showSliderSubTitle == null) {
@@ -306,9 +329,27 @@ public final class ActivitySettingBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.switchUseRoom;
+      Switch switchUseRoom = rootView.findViewById(id);
+      if (switchUseRoom == null) {
+        break missingId;
+      }
+
       id = R.id.textView17;
       TextView textView17 = rootView.findViewById(id);
       if (textView17 == null) {
+        break missingId;
+      }
+
+      id = R.id.useRoom;
+      TextView useRoom = rootView.findViewById(id);
+      if (useRoom == null) {
+        break missingId;
+      }
+
+      id = R.id.useRoomSubTitle;
+      TextView useRoomSubTitle = rootView.findViewById(id);
+      if (useRoomSubTitle == null) {
         break missingId;
       }
 
@@ -325,7 +366,8 @@ public final class ActivitySettingBinding implements ViewBinding {
           scheduleCourseItemHeightTitle, scheduleCourseMarginItem, scheduleCourseMarginSubtitle,
           scheduleCourseMarginTitle, scheduleIsNotCurWeek, scheduleIsNotCurWeekSubTitle,
           scheduleIsNotCurWeekTitle, scheduleMaxSessionIcon, schedulePaletteItem,
-          showSliderSubTitle, switchIsNotCurWeek, switchIsShowSlider, textView17, versionSlogan);
+          scheduleUseRoomItem, showSliderSubTitle, switchIsNotCurWeek, switchIsShowSlider,
+          switchUseRoom, textView17, useRoom, useRoomSubTitle, versionSlogan);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

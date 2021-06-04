@@ -4,20 +4,110 @@ package com.kirito666.room.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
+import com.google.android.material.appbar.AppBarLayout;
+import com.google.android.material.appbar.CollapsingToolbarLayout;
+import com.google.android.material.appbar.MaterialToolbar;
 import com.kirito666.room.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class ActivityProfileBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
 
-  private ActivityProfileBinding(@NonNull ConstraintLayout rootView) {
+  @NonNull
+  public final AppBarLayout appbar;
+
+  @NonNull
+  public final TextView editCourseDayTitle;
+
+  @NonNull
+  public final ImageView imageView11;
+
+  @NonNull
+  public final ConstraintLayout profileClass;
+
+  @NonNull
+  public final TextView profileClassSubtitle;
+
+  @NonNull
+  public final ConstraintLayout profileEmail;
+
+  @NonNull
+  public final TextView profileEmailSubtitle;
+
+  @NonNull
+  public final ConstraintLayout profileTelephone;
+
+  @NonNull
+  public final TextView profileTelephoneSubtitle;
+
+  @NonNull
+  public final ConstraintLayout profileUniversity;
+
+  @NonNull
+  public final TextView profileUniversitySubtitle;
+
+  @NonNull
+  public final ImageView s2Img;
+
+  @NonNull
+  public final ImageView s3Img;
+
+  @NonNull
+  public final TextView s3Title;
+
+  @NonNull
+  public final ImageView shortBtnEdit;
+
+  @NonNull
+  public final TextView textView35;
+
+  @NonNull
+  public final TextView textView36;
+
+  @NonNull
+  public final MaterialToolbar toolbar;
+
+  @NonNull
+  public final CollapsingToolbarLayout toolbarLayout;
+
+  private ActivityProfileBinding(@NonNull ConstraintLayout rootView, @NonNull AppBarLayout appbar,
+      @NonNull TextView editCourseDayTitle, @NonNull ImageView imageView11,
+      @NonNull ConstraintLayout profileClass, @NonNull TextView profileClassSubtitle,
+      @NonNull ConstraintLayout profileEmail, @NonNull TextView profileEmailSubtitle,
+      @NonNull ConstraintLayout profileTelephone, @NonNull TextView profileTelephoneSubtitle,
+      @NonNull ConstraintLayout profileUniversity, @NonNull TextView profileUniversitySubtitle,
+      @NonNull ImageView s2Img, @NonNull ImageView s3Img, @NonNull TextView s3Title,
+      @NonNull ImageView shortBtnEdit, @NonNull TextView textView35, @NonNull TextView textView36,
+      @NonNull MaterialToolbar toolbar, @NonNull CollapsingToolbarLayout toolbarLayout) {
     this.rootView = rootView;
+    this.appbar = appbar;
+    this.editCourseDayTitle = editCourseDayTitle;
+    this.imageView11 = imageView11;
+    this.profileClass = profileClass;
+    this.profileClassSubtitle = profileClassSubtitle;
+    this.profileEmail = profileEmail;
+    this.profileEmailSubtitle = profileEmailSubtitle;
+    this.profileTelephone = profileTelephone;
+    this.profileTelephoneSubtitle = profileTelephoneSubtitle;
+    this.profileUniversity = profileUniversity;
+    this.profileUniversitySubtitle = profileUniversitySubtitle;
+    this.s2Img = s2Img;
+    this.s3Img = s3Img;
+    this.s3Title = s3Title;
+    this.shortBtnEdit = shortBtnEdit;
+    this.textView35 = textView35;
+    this.textView36 = textView36;
+    this.toolbar = toolbar;
+    this.toolbarLayout = toolbarLayout;
   }
 
   @Override
@@ -43,10 +133,130 @@ public final class ActivityProfileBinding implements ViewBinding {
 
   @NonNull
   public static ActivityProfileBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.appbar;
+      AppBarLayout appbar = rootView.findViewById(id);
+      if (appbar == null) {
+        break missingId;
+      }
 
-    return new ActivityProfileBinding((ConstraintLayout) rootView);
+      id = R.id.editCourseDayTitle;
+      TextView editCourseDayTitle = rootView.findViewById(id);
+      if (editCourseDayTitle == null) {
+        break missingId;
+      }
+
+      id = R.id.imageView11;
+      ImageView imageView11 = rootView.findViewById(id);
+      if (imageView11 == null) {
+        break missingId;
+      }
+
+      id = R.id.profile_class;
+      ConstraintLayout profileClass = rootView.findViewById(id);
+      if (profileClass == null) {
+        break missingId;
+      }
+
+      id = R.id.profileClassSubtitle;
+      TextView profileClassSubtitle = rootView.findViewById(id);
+      if (profileClassSubtitle == null) {
+        break missingId;
+      }
+
+      id = R.id.profile_email;
+      ConstraintLayout profileEmail = rootView.findViewById(id);
+      if (profileEmail == null) {
+        break missingId;
+      }
+
+      id = R.id.profileEmailSubtitle;
+      TextView profileEmailSubtitle = rootView.findViewById(id);
+      if (profileEmailSubtitle == null) {
+        break missingId;
+      }
+
+      id = R.id.profile_telephone;
+      ConstraintLayout profileTelephone = rootView.findViewById(id);
+      if (profileTelephone == null) {
+        break missingId;
+      }
+
+      id = R.id.profileTelephoneSubtitle;
+      TextView profileTelephoneSubtitle = rootView.findViewById(id);
+      if (profileTelephoneSubtitle == null) {
+        break missingId;
+      }
+
+      id = R.id.profile_university;
+      ConstraintLayout profileUniversity = rootView.findViewById(id);
+      if (profileUniversity == null) {
+        break missingId;
+      }
+
+      id = R.id.profileUniversitySubtitle;
+      TextView profileUniversitySubtitle = rootView.findViewById(id);
+      if (profileUniversitySubtitle == null) {
+        break missingId;
+      }
+
+      id = R.id.s2_img;
+      ImageView s2Img = rootView.findViewById(id);
+      if (s2Img == null) {
+        break missingId;
+      }
+
+      id = R.id.s3_img;
+      ImageView s3Img = rootView.findViewById(id);
+      if (s3Img == null) {
+        break missingId;
+      }
+
+      id = R.id.s3_title;
+      TextView s3Title = rootView.findViewById(id);
+      if (s3Title == null) {
+        break missingId;
+      }
+
+      id = R.id.short_btn_edit;
+      ImageView shortBtnEdit = rootView.findViewById(id);
+      if (shortBtnEdit == null) {
+        break missingId;
+      }
+
+      id = R.id.textView35;
+      TextView textView35 = rootView.findViewById(id);
+      if (textView35 == null) {
+        break missingId;
+      }
+
+      id = R.id.textView36;
+      TextView textView36 = rootView.findViewById(id);
+      if (textView36 == null) {
+        break missingId;
+      }
+
+      id = R.id.toolbar;
+      MaterialToolbar toolbar = rootView.findViewById(id);
+      if (toolbar == null) {
+        break missingId;
+      }
+
+      id = R.id.toolbar_layout;
+      CollapsingToolbarLayout toolbarLayout = rootView.findViewById(id);
+      if (toolbarLayout == null) {
+        break missingId;
+      }
+
+      return new ActivityProfileBinding((ConstraintLayout) rootView, appbar, editCourseDayTitle,
+          imageView11, profileClass, profileClassSubtitle, profileEmail, profileEmailSubtitle,
+          profileTelephone, profileTelephoneSubtitle, profileUniversity, profileUniversitySubtitle,
+          s2Img, s3Img, s3Title, shortBtnEdit, textView35, textView36, toolbar, toolbarLayout);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

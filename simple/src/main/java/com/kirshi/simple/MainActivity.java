@@ -14,8 +14,8 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.kirshi.advance.R;
+import com.kirshi.advance.databinding.ActivityMainBinding;
 import com.kirshi.framework.base.BaseActivity;
-import com.kirshi.simple.databinding.ActivityMainBinding;
 import com.kirshi.simple.fragment.DashboardFragment;
 import com.kirshi.simple.fragment.HomeFragment;
 import com.kirshi.simple.fragment.NotificationFragment;

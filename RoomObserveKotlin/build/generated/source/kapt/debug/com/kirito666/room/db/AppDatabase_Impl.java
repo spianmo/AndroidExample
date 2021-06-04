@@ -35,9 +35,9 @@ public final class AppDatabase_Impl extends AppDatabase {
     final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(1) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `CourseModel` (`uid` TEXT, `cid` INTEGER PRIMARY KEY AUTOINCREMENT, `cname` TEXT NOT NULL, `schoolYear` TEXT, `term` TEXT, `credit` REAL NOT NULL, `startSection` INTEGER NOT NULL, `endSection` INTEGER NOT NULL, `startWeek` INTEGER NOT NULL, `endWeek` INTEGER NOT NULL, `dayOfWeek` INTEGER NOT NULL, `classroom` TEXT, `teacher` TEXT)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `CourseModel` (`cid` INTEGER PRIMARY KEY AUTOINCREMENT, `cname` TEXT NOT NULL, `startSection` INTEGER NOT NULL, `endSection` INTEGER NOT NULL, `startWeek` INTEGER NOT NULL, `endWeek` INTEGER NOT NULL, `dayOfWeek` INTEGER NOT NULL, `classroom` TEXT, `teacher` TEXT)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '1ad0dc217b200c6d6e946a210761a3a3')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '49ef2518c37fb1bd5820b32958443573')");
       }
 
       @Override
@@ -81,13 +81,9 @@ public final class AppDatabase_Impl extends AppDatabase {
 
       @Override
       protected RoomOpenHelper.ValidationResult onValidateSchema(SupportSQLiteDatabase _db) {
-        final HashMap<String, TableInfo.Column> _columnsCourseModel = new HashMap<String, TableInfo.Column>(13);
-        _columnsCourseModel.put("uid", new TableInfo.Column("uid", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashMap<String, TableInfo.Column> _columnsCourseModel = new HashMap<String, TableInfo.Column>(9);
         _columnsCourseModel.put("cid", new TableInfo.Column("cid", "INTEGER", false, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsCourseModel.put("cname", new TableInfo.Column("cname", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsCourseModel.put("schoolYear", new TableInfo.Column("schoolYear", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsCourseModel.put("term", new TableInfo.Column("term", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsCourseModel.put("credit", new TableInfo.Column("credit", "REAL", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsCourseModel.put("startSection", new TableInfo.Column("startSection", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsCourseModel.put("endSection", new TableInfo.Column("endSection", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsCourseModel.put("startWeek", new TableInfo.Column("startWeek", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
@@ -106,7 +102,7 @@ public final class AppDatabase_Impl extends AppDatabase {
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "1ad0dc217b200c6d6e946a210761a3a3", "abebf76dad1ee4933e4fea261c62820f");
+    }, "49ef2518c37fb1bd5820b32958443573", "7f52a2e06006a004764abdc0a394b123");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)

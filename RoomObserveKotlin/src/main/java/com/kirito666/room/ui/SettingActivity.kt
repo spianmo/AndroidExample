@@ -68,6 +68,10 @@ class SettingActivity : BaseActivity<ActivitySettingBinding>() {
                 negativeButton(text = "取消")
             }
         }
+        v.scheduleUseRoomItem.setOnClickListener {
+            v.switchUseRoom.isChecked = !v.switchUseRoom.isChecked
+            Prefs.save("useRoom", v.switchUseRoom.isChecked)
+        }
 
         observeDataChanged()
     }
@@ -111,6 +115,17 @@ class SettingActivity : BaseActivity<ActivitySettingBinding>() {
         )
             .observe(this) { itemHeight ->
                 v.scheduleCourseMarginSubtitle.text = itemHeight.toString() + "dp"
+            }
+        SharedPreferenceBooleanLiveData(
+            getSharedPreferences(
+                settingPreference,
+                Context.MODE_PRIVATE
+            ), "useRoom", true
+        )
+            .observe(this) { useRoom ->
+                v.switchUseRoom.isChecked = useRoom
+                v.useRoomSubTitle.text =
+                    if (useRoom) "当前使用Room框架进行CRUD" else "当前使用SQLite原生Api进行CRUD"
             }
     }
 }

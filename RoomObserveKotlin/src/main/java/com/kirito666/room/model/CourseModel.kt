@@ -5,20 +5,12 @@ import androidx.room.PrimaryKey
 import java.io.Serializable
 
 @Entity
-data class CourseModel(
-    //学生 id
-    var uid: String? = null,
+data class CourseModel @JvmOverloads constructor(
     //课程 id
     @PrimaryKey(autoGenerate = true)
     var cid: Long? = null,
     //课程名
     var cname: String = "",
-    //学年
-    var schoolYear: String? = null,
-    //学期
-    var term: String? = null,
-    //学分
-    var credit: Float = 0f,
     //开始节次
     var startSection: Int = 1,
     //结束节次
