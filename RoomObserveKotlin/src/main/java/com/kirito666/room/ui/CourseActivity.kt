@@ -155,6 +155,7 @@ class CourseActivity : BaseActivity<ActivityCourseBinding>() {
                                     .delete(course)
                             else
                                 mCourseDao.delete(course)
+                                ktxRunOnUi { onResume() }
                         }
                     }
             }

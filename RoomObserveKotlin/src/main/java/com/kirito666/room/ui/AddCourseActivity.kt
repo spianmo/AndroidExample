@@ -2,6 +2,7 @@ package com.kirito666.room.ui
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.os.Handler
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
 import com.google.android.material.slider.RangeSlider
@@ -208,7 +209,10 @@ class AddCourseActivity : BaseActivity<ActivityAddCourseBinding>() {
                     MIUIDialog(this).show {
                         message(text = "数据处理成功")
                         positiveButton(text = "确定") {
-                            finish()
+                            Handler(mainLooper).postDelayed({
+                                finish()
+                            }, 400)
+
                         }
                     }
                 } catch (ignored: Exception) {
